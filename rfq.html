@@ -19,13 +19,16 @@
   <!-- Top Main Navigation Bar -->
   <div class="top-nav">
     <div class="site-container top-nav-inner">
-      <!-- Left: Logo & Location -->
+      <!-- Left: Mobile Hamburger & Logo -->
       <div class="nav-left-group">
+        <button type="button" class="mob-hamburger-btn" id="mob-hamburger-btn" aria-label="Open Navigation Menu" onclick="document.getElementById('mobile-drawer').classList.add('active'); document.body.style.overflow='hidden';">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
         <a href="/" class="brand-logo-wrap" aria-label="Matelioverse Homepage">
-          <img src="https://api.matelioverse.com/assets/e0847d46-2489-475e-8dfc-e7b520e1df15" alt="Matelioverse" class="brand-logo-img" width="180" height="34">
+          <img src="https://api.matelioverse.com/assets/e0847d46-2489-475e-8dfc-e7b520e1df15" alt="Matelioverse" class="brand-logo-img" width="160" height="30">
         </a>
 
-        <!-- Delivery location picker -->
+        <!-- Delivery location picker (Desktop) -->
         <div class="delivery-picker-btn" id="delivery-picker">
           <div class="delivery-lightning">⚡</div>
           <div class="delivery-text-wrap">
@@ -67,6 +70,24 @@
         </a>
       </div>
     </div>
+  </div>
+
+  <!-- Mobile Sub-Bar: Delivery Location Strip (Mobile Only) -->
+  <div class="mob-delivery-strip">
+    <div class="site-container mob-delivery-strip-inner">
+      <div class="mob-delivery-badge">
+        <span class="bolt">⚡</span> 1-4 hrs delivery
+      </div>
+      <div class="mob-delivery-loc-text">
+        Bengaluru, Karnataka, India <span class="chevron">▾</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Subpage Back Header (Mobile Only) -->
+  <div class="mob-page-header">
+    <a href="/" class="mob-back-btn" aria-label="Back to home">‹</a>
+    <span class="mob-page-title">Request for quotation</span>
   </div>
 
   <!-- Secondary Sub-Nav Row -->
@@ -334,6 +355,91 @@
     </form>
   </div>
 </div>
+
+<!-- Mobile Navigation Drawer -->
+<div class="mobile-drawer-overlay" id="mobile-drawer" onclick="if(event.target===this){this.classList.remove('active'); document.body.style.overflow='';}">
+  <div class="mobile-drawer-card">
+    <div class="mob-drawer-header">
+      <a href="/" class="brand-logo-wrap">
+        <img src="https://api.matelioverse.com/assets/e0847d46-2489-475e-8dfc-e7b520e1df15" alt="Matelioverse" width="145" height="28">
+      </a>
+      <button type="button" class="mob-drawer-close-btn" onclick="document.getElementById('mobile-drawer').classList.remove('active'); document.body.style.overflow='';">✕</button>
+    </div>
+
+    <div class="mob-drawer-body">
+      <div class="mob-drawer-section-title">EXPLORE</div>
+      <a href="/" class="mob-drawer-link">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        <span>Home</span>
+      </a>
+      <a href="/categories.html" class="mob-drawer-link">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4 4h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 10h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 16h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4z"/></svg>
+        <span>All 15 Categories</span>
+      </a>
+      <a href="/rfq.html" class="mob-drawer-link" style="color: var(--primary-green);">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <span>Request for Quotation (RFQ)</span>
+        <span class="mob-badge-new">FAST</span>
+      </a>
+      <a href="/partner.html" class="mob-drawer-link">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9h-6m6 3h-6m3-3v6m0 0v3"/></svg>
+        <span>Line of Credit (CredEzy)</span>
+        <span class="mob-badge-hot">₹25L</span>
+      </a>
+      <a href="/partner.html" class="mob-drawer-link">
+        <span style="font-size:18px;">🎁</span>
+        <span>Refer & Earn ₹1000</span>
+      </a>
+
+      <div class="mob-drawer-divider"></div>
+
+      <div class="mob-drawer-section-title">SUPPORT & COMPANY</div>
+      <a href="/about.html" class="mob-drawer-link">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <span>About Matelioverse</span>
+      </a>
+      <a href="/contact.html" class="mob-drawer-link">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>Contact Us</span>
+      </a>
+      <a href="https://wa.me/919824939888" target="_blank" class="mob-drawer-link" style="color: #00A86B;">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.82.49 3.53 1.36 5L2 22l5.14-1.34A9.96 9.96 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm4.95 14.19c-.21.59-1.2 1.09-1.66 1.15-.43.06-.98.09-3.02-.75-2.6-1.07-4.24-3.73-4.37-3.9-.13-.17-1.04-1.39-1.04-2.64s.66-1.87.89-2.13c.23-.25.5-.32.67-.32.17 0 .34 0 .49.01.16.01.37-.06.57.43.21.5.72 1.76.78 1.89.06.13.1.28.02.44-.08.17-.13.27-.25.41-.13.14-.27.31-.38.42-.13.13-.26.26-.11.52.15.26.68 1.11 1.45 1.8.99.89 1.83 1.16 2.09 1.29.26.13.41.11.56-.06.16-.17.67-.78.85-1.05.18-.26.36-.22.6-.13.25.09 1.58.74 1.85.88.27.13.45.2.52.31.06.12.06.69-.15 1.28z"/></svg>
+        <span>WhatsApp Support</span>
+      </a>
+    </div>
+
+    <div class="mob-drawer-footer">
+      <button type="button" class="mob-drawer-login-btn" onclick="document.getElementById('mobile-drawer').classList.remove('active'); document.getElementById('login-modal').classList.add('active'); document.body.style.overflow='hidden';">
+        <span>Log in or Sign up</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Native Mobile App Bottom Navigation Bar -->
+<nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
+  <a href="/" class="mob-nav-tab">
+    <svg class="mob-tab-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+    <span>Home</span>
+  </a>
+  <a href="/partner.html" class="mob-nav-tab">
+    <svg class="mob-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9h-6m6 3h-6m3-3v6m0 0v3"/></svg>
+    <span>Credit</span>
+  </a>
+  <a href="/categories.html" class="mob-nav-tab">
+    <svg class="mob-tab-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 10h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 16h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4z"/></svg>
+    <span>Categories</span>
+  </a>
+  <a href="/rfq.html" class="mob-nav-tab active">
+    <svg class="mob-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+    <span>Orders</span>
+  </a>
+  <button type="button" class="mob-nav-tab" onclick="document.getElementById('login-modal').classList.add('active'); document.body.style.overflow='hidden';">
+    <svg class="mob-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    <span>Profile</span>
+  </button>
+</nav>
 
 <script type="module" src="./script.js"></script>
 </body>

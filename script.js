@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSearchPlaceholder();
   initAddButtons();
   initLoginModal();
+  initMobileDrawer();
 });
 
 /* ── Hero Carousel (Auto-rotation & Dot Navigation) ── */
@@ -111,6 +112,36 @@ function initLoginModal() {
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+  });
+}
+
+/* ── Mobile Slide-Out Drawer ── */
+function initMobileDrawer() {
+  const drawer = document.getElementById('mobile-drawer');
+  const trigger = document.getElementById('mob-hamburger-btn');
+  if (!drawer) return;
+
+  function openDrawer() {
+    drawer.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  if (trigger) trigger.addEventListener('click', openDrawer);
+
+  drawer.addEventListener('click', (e) => {
+    if (e.target === drawer) closeDrawer();
+  });
+
+  const closeBtns = drawer.querySelectorAll('.mob-drawer-close-btn, .mob-drawer-link');
+  closeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      closeDrawer();
+    });
   });
 }
 
