@@ -1,232 +1,353 @@
 <!DOCTYPE html>
-<html lang="en-IN">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Categories & Brands | Matelioverse</title>
-  <meta name="description" content="Browse all building material categories and private label brands at Matelioverse. Tiles, plumbing, electrical, paints, hardware, plywood, cement and more.">
-  <link rel="icon" href="https://matelioverse.com/favicon.svg" type="image/svg+xml">
+  <meta name="description" content="Explore verified building materials across all 15 categories with 1-4 hour express delivery.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- ═══ HEADER ═══ -->
-<header class="header" id="header">
-  <nav class="top-nav" aria-label="Primary navigation">
-    <div class="top-nav-inner">
-      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-      </button>
-      <a href="/" class="nav-logo" aria-label="Matelioverse home">
-        <img src="https://api.matelioverse.com/assets/e0847d46-2489-475e-8dfc-e7b520e1df15" alt="Matelioverse Logo" width="180" height="32">
-      </a>
-      <div class="nav-search">
-        <div class="search-input-wrap">
-          <input type="search" placeholder="Search categories & products..." autocomplete="off" aria-label="Search">
-          <button class="search-ai-btn" aria-label="AI Search">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1.27c.34-.6.99-1 1.73-1a2 2 0 010 4c-.74 0-1.39-.4-1.73-1H20a7 7 0 01-7 7v1.27c.6.34 1 .99 1 1.73a2 2 0 01-4 0c0-.74.4-1.39 1-1.73V23a7 7 0 01-7-7H2.73c-.34.6-.99 1-1.73 1a2 2 0 010-4c.74 0 1.39.4 1.73 1H4a7 7 0 017-7V5.73c-.6-.34-1-.99-1-1.73a2 2 0 012-2z"/></svg>
+<!-- STICKY DOUBLE HEADER -->
+<header class="site-header" id="site-header">
+  <!-- Top Main Navigation Bar -->
+  <div class="top-nav">
+    <div class="site-container top-nav-inner">
+      <!-- Left: Logo & Location -->
+      <div class="nav-left-group">
+        <a href="/" class="brand-logo-wrap" aria-label="Matelioverse Homepage">
+          <img src="https://api.matelioverse.com/assets/e0847d46-2489-475e-8dfc-e7b520e1df15" alt="Matelioverse" class="brand-logo-img" width="180" height="34">
+        </a>
+
+        <!-- Delivery location picker -->
+        <div class="delivery-picker-btn" id="delivery-picker">
+          <div class="delivery-lightning">⚡</div>
+          <div class="delivery-text-wrap">
+            <div class="delivery-title-row">
+              <span>1-4 hrs delivery</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+            <div class="delivery-location-row">Bengaluru, Karnataka, India</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center: Search bar with AI button -->
+      <div class="top-search-wrap">
+        <div class="top-search-inner">
+          <input type="search" id="top-search-input" class="top-search-input" placeholder='Search "tiles"' autocomplete="off" aria-label="Search building materials">
+          <button type="button" class="top-search-ai-btn" aria-label="Search with AI">
+            <svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1.27c.34-.6.99-1 1.73-1a2 2 0 010 4c-.74 0-1.39-.4-1.73-1H20a7 7 0 01-7 7v1.27c.6.34 1 .99 1 1.73a2 2 0 01-4 0c0-.74.4-1.39 1-1.73V23a7 7 0 01-7-7H2.73c-.34.6-.99 1-1.73 1a2 2 0 010-4c.74 0 1.39.4 1.73 1H4a7 7 0 017-7V5.73c-.6-.34-1-.99-1-1.73a2 2 0 012-2z"/></svg>
             <span>AI</span>
           </button>
         </div>
       </div>
-      <div class="nav-actions">
-        <button class="nav-login-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Login</span></button>
-        <button class="nav-cart-btn" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg><span>Cart</span></button>
-      </div>
-    </div>
-  </nav>
-  <div class="sub-nav">
-    <div class="sub-nav-inner">
-      <div class="sub-nav-left">
-        <a href="/categories.html" class="categories-dropdown-btn">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/></svg>
-          Categories
+
+      <!-- Right: Referral, Login, Cart -->
+      <div class="top-nav-actions">
+        <a href="/partner.html" class="referral-pill-btn" aria-label="Refer and Earn">
+          <span class="referral-gift-icon">🎁</span>
+          <div class="referral-text-stack">
+            <span class="referral-label-sm">Get</span>
+            <span class="referral-label-lg">₹1000</span>
+          </div>
+        </a>
+
+        <button type="button" class="nav-login-pill" id="nav-login-btn" onclick="document.getElementById('login-modal').classList.add('active'); document.body.style.overflow='hidden';">Login</button>
+
+        <a href="/categories.html" class="nav-cart-btn" aria-label="Shopping Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+          <span>Cart</span>
         </a>
       </div>
-      <div class="sub-nav-right">
-        <a href="/contact.html" class="sub-nav-link">Contact Us</a>
-        <a href="/partner.html" class="sub-nav-link">Partner With Us</a>
-        <a href="/about.html" class="sub-nav-link">About Us</a>
+    </div>
+  </div>
+
+  <!-- Secondary Sub-Nav Row -->
+  <div class="sub-nav">
+    <div class="site-container sub-nav-inner">
+      <div class="sub-nav-left categories-nav-item">
+        <a href="/categories.html" class="sub-nav-link cat-dropdown-trigger active" style="display:flex;align-items:center;gap:6px;text-decoration:none;color:var(--primary-green);font-weight:700;font-size:13.5px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 10h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 16h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4z"/></svg>
+          <span>Categories</span>
+          <span class="cat-arrow-down">▾</span>
+        </a>
+        <div class="categories-dropdown-menu">
+          <a href="/categories.html" class="cat-dropdown-item">Building materials <span>›</span></a>
+          <a href="/categories.html" class="cat-dropdown-item">Bathroom <span>›</span></a>
+          <a href="/categories.html" class="cat-dropdown-item">Plumbing <span>›</span></a>
+          <a href="/categories.html" class="cat-dropdown-item">Electrical <span>›</span></a>
+          <a href="/categories.html" class="cat-dropdown-item">Lighting <span>›</span></a>
+          <a href="/categories.html" class="cat-dropdown-item">Tiles <span>›</span></a>
+          <a href="/categories.html" class="cat-dropdown-item">Hardware & Fittings <span>›</span></a>
+          <a href="/categories.html" class="cat-dropdown-item">Paints, Putty & Coatings <span>›</span></a>
+        </div>
+      </div>
+
+      <div class="sub-nav-right-links">
+        <a href="/contact.html" class="sub-link">Contact us</a>
+        <a href="/rfq.html" class="sub-link">Large order (RFQ)</a>
+        <a href="/partner.html" class="matelio-star-pill">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span>matelio STAR</span>
+        </a>
       </div>
     </div>
   </div>
 </header>
 
-<!-- Mobile Nav -->
-<div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
-<div class="mobile-nav-drawer" id="mobile-nav-drawer">
-  <div class="mobile-nav-header">
-    <img src="https://api.matelioverse.com/assets/e0847d46-2489-475e-8dfc-e7b520e1df15" alt="Matelioverse" height="28">
-    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
-  </div>
-  <nav class="mobile-nav-links">
-    <a href="/">Home</a><a href="/about.html">About Us</a><a href="/categories.html">Categories & Brands</a><a href="/partner.html">Partner With Us</a><a href="/contact.html">Contact Us</a>
-  </nav>
-</div>
+<main style="background: #F8FAFC; padding: 32px 0 60px 0; min-height: 80vh;">
+  <div class="site-container">
+    <div class="breadcrumb-row">
+      <a href="/">home</a>
+      <span>&gt;</span>
+      <span style="color: #0F172A; font-weight: 600;">categories</span>
+    </div>
 
-<main id="main-content">
+    <div style="margin-bottom: 28px;">
+      <h1 style="font-size: 28px; font-weight: 800; color: #0F172A; margin-bottom: 6px;">All Categories</h1>
+      <p style="font-size: 14px; color: #64748B;">Explore verified materials across 15 specialized construction & interior categories</p>
+    </div>
 
-<!-- Page Hero -->
-<section class="page-hero">
-  <div class="container">
-    <h1 class="page-hero-title">Categories & Brands</h1>
-    <p class="page-hero-subtitle">Explore our extensive range of building materials across 15+ categories — from tiles and plumbing to electrical and paints.</p>
-  </div>
-</section>
+    <!-- Category Grid Matching MOB 1:1 -->
+    <div class="categories-grid-row-1" style="margin-bottom: 16px;">
+      <div class="cat-card-item">
+        <div class="cat-card-box">
+          <img src="https://cdn.madoverbuildings.com/category/category/Building_Materials.webp" alt="Building materials" loading="lazy">
+        </div>
+        <span class="cat-card-label">Building materials</span>
+      </div>
 
-<!-- All Categories Grid -->
-<section class="content-section">
-  <div class="container">
-    <h2 class="section-title" style="text-align:center; margin-bottom:40px;">All Categories</h2>
-  </div>
-  <div class="categories-page-grid">
-    <div class="category-page-card">
-      <div class="category-page-card-image"><img src="https://cdn.madoverbuildings.com/category/category/Building_Materials.webp" alt="Building Materials" loading="lazy"></div>
-      <div class="category-page-card-body">
-        <h3>Building Materials</h3>
-        <p>Cement, sand, aggregates, bricks, blocks, TMT steel bars and more for structural needs.</p>
-        <span class="explore-link">Explore →</span>
+      <div class="cat-card-item">
+        <div class="cat-card-box">
+          <img src="https://cdn.madoverbuildings.com/category/category/Bathroom.webp" alt="Bathroom" loading="lazy">
+        </div>
+        <span class="cat-card-label">Bathroom</span>
       </div>
-    </div>
-    <div class="category-page-card">
-      <div class="category-page-card-image"><img src="https://cdn.madoverbuildings.com/category/category/Tiles.webp" alt="Tiles" loading="lazy"></div>
-      <div class="category-page-card-body">
-        <h3>Tiles</h3>
-        <p>Floor tiles, wall tiles, vitrified, ceramic, porcelain, mosaic and outdoor parking tiles.</p>
-        <span class="explore-link">Explore →</span>
-      </div>
-    </div>
-    <div class="category-page-card">
-      <div class="category-page-card-image"><img src="https://cdn.madoverbuildings.com/category/category/Plumbing.webp" alt="Plumbing" loading="lazy"></div>
-      <div class="category-page-card-body">
-        <h3>Plumbing</h3>
-        <p>PVC/CPVC pipes, fittings, valves, taps, mixers, water tanks and pumps.</p>
-        <span class="explore-link">Explore →</span>
-      </div>
-    </div>
-    <div class="category-page-card">
-      <div class="category-page-card-image"><img src="https://cdn.madoverbuildings.com/category/category/Electrical.webp" alt="Electrical" loading="lazy"></div>
-      <div class="category-page-card-body">
-        <h3>Electrical</h3>
-        <p>Wires, cables, switches, sockets, MCBs, distribution boards and wiring accessories.</p>
-        <span class="explore-link">Explore →</span>
-      </div>
-    </div>
-    <div class="category-page-card">
-      <div class="category-page-card-image"><img src="https://cdn.madoverbuildings.com/category/category/Paints_Putty_and_Coatings.webp" alt="Paints" loading="lazy"></div>
-      <div class="category-page-card-body">
-        <h3>Paints & Coatings</h3>
-        <p>Interior paints, exterior paints, primers, putty, distempers and wood finishes.</p>
-        <span class="explore-link">Explore →</span>
-      </div>
-    </div>
-    <div class="category-page-card">
-      <div class="category-page-card-image"><img src="https://cdn.madoverbuildings.com/category/category/Hardware_and_Fittings.webp" alt="Hardware" loading="lazy"></div>
-      <div class="category-page-card-body">
-        <h3>Hardware & Fittings</h3>
-        <p>Door hardware, hinges, locks, handles, drawer slides and cabinet fittings.</p>
-        <span class="explore-link">Explore →</span>
-      </div>
-    </div>
-    <div class="category-page-card">
-      <div class="category-page-card-image"><img src="https://cdn.madoverbuildings.com/category/category/Plywood_and_Boards.webp" alt="Plywood" loading="lazy"></div>
-      <div class="category-page-card-body">
-        <h3>Plywood & Boards</h3>
-        <p>Plywood, MDF, particle board, block board, flush doors and decorative veneers.</p>
-        <span class="explore-link">Explore →</span>
-      </div>
-    </div>
-    <div class="category-page-card">
-      <div class="category-page-card-image"><img src="https://cdn.madoverbuildings.com/category/category/Bathroom.webp" alt="Sanitaryware" loading="lazy"></div>
-      <div class="category-page-card-body">
-        <h3>Sanitaryware</h3>
-        <p>Wash basins, toilets, bathtubs, shower panels, bathroom accessories and fittings.</p>
-        <span class="explore-link">Explore →</span>
-      </div>
-    </div>
-    <div class="category-page-card">
-      <div class="category-page-card-image"><img src="https://cdn.madoverbuildings.com/category/category/Lighting.webp" alt="Lighting" loading="lazy"></div>
-      <div class="category-page-card-body">
-        <h3>Lighting</h3>
-        <p>LED panels, downlights, strip lights, chandeliers, outdoor and commercial lighting.</p>
-        <span class="explore-link">Explore →</span>
-      </div>
-    </div>
-    <div class="category-page-card">
-      <div class="category-page-card-image"><img src="https://cdn.madoverbuildings.com/category/category/Laminates.webp" alt="Laminates" loading="lazy"></div>
-      <div class="category-page-card-body">
-        <h3>Laminates</h3>
-        <p>HPL, decorative laminates, textured finishes, compact laminates and edge bands.</p>
-        <span class="explore-link">Explore →</span>
-      </div>
-    </div>
-    <div class="category-page-card">
-      <div class="category-page-card-image"><img src="https://cdn.madoverbuildings.com/category/category/Kitchen.webp" alt="Kitchen" loading="lazy"></div>
-      <div class="category-page-card-body">
-        <h3>Kitchen</h3>
-        <p>Kitchen sinks, faucets, chimneys, hobs, built-in appliances and kitchen hardware.</p>
-        <span class="explore-link">Explore →</span>
-      </div>
-    </div>
-    <div class="category-page-card">
-      <div class="category-page-card-image"><img src="https://cdn.madoverbuildings.com/category/category/Tools_Equipment_and_Safety.webp" alt="Tools" loading="lazy"></div>
-      <div class="category-page-card-body">
-        <h3>Tools & Equipment</h3>
-        <p>Power tools, hand tools, measuring tools, safety gear and construction equipment.</p>
-        <span class="explore-link">Explore →</span>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- Our Brands -->
-<section class="brands-section">
-  <div class="section-header">
-    <h2 class="section-title">Our Private Label Brands</h2>
-  </div>
-  <div class="brands-grid">
-    <div class="brand-card"><img src="https://api.matelioverse.com/assets/c232adb3-0a14-4f54-b28d-0ccdbd18a88b" alt="Strongfab" loading="lazy"></div>
-    <div class="brand-card"><img src="https://api.matelioverse.com/assets/5fdb7ac5-124f-4c22-af5b-dc0876af9aea" alt="Xtra-Cam" loading="lazy"></div>
-    <div class="brand-card"><img src="https://api.matelioverse.com/assets/c21a907a-9fe3-4e14-8c6a-a4fe775476c3" alt="TileTrendz" loading="lazy"></div>
-    <div class="brand-card"><img src="https://api.matelioverse.com/assets/22a04414-4916-4f67-867e-b5bd95b416ce" alt="Hydrolines" loading="lazy"></div>
-    <div class="brand-card"><img src="https://api.matelioverse.com/assets/74913a3c-32b8-40c3-918a-de641df70d38" alt="ReflectoGlass" loading="lazy"></div>
-    <div class="brand-card"><img src="https://api.matelioverse.com/assets/c232adb3-0a14-4f54-b28d-0ccdbd18a88b" alt="Strongfab" loading="lazy"></div>
-  </div>
-</section>
+      <div class="cat-card-item">
+        <div class="cat-card-box">
+          <img src="https://cdn.madoverbuildings.com/category/category/Plumbing.webp" alt="Plumbing" loading="lazy">
+        </div>
+        <span class="cat-card-label">Plumbing</span>
+      </div>
 
+      <div class="cat-card-item">
+        <div class="cat-card-box">
+          <img src="https://cdn.madoverbuildings.com/category/category/Electrical.webp" alt="Electrical" loading="lazy">
+        </div>
+        <span class="cat-card-label">Electrical</span>
+      </div>
+
+      <div class="cat-card-item">
+        <div class="cat-card-box">
+          <img src="https://cdn.madoverbuildings.com/category/category/Lighting.webp" alt="Lighting" loading="lazy">
+        </div>
+        <span class="cat-card-label">Lighting</span>
+      </div>
+
+      <div class="cat-card-item">
+        <div class="cat-card-box">
+          <img src="https://cdn.madoverbuildings.com/category/category/Fans.webp" alt="Fans" loading="lazy">
+        </div>
+        <span class="cat-card-label">Fans</span>
+      </div>
+
+      <div class="cat-card-item">
+        <div class="cat-card-box">
+          <img src="https://cdn.madoverbuildings.com/category/category/Plywood_and_Boards.webp" alt="Plywood and Boards" loading="lazy">
+        </div>
+        <span class="cat-card-label">Plywood and Boards</span>
+      </div>
+
+      <div class="cat-card-item">
+        <div class="cat-card-box">
+          <img src="https://cdn.madoverbuildings.com/category/category/Laminates.webp" alt="Laminates" loading="lazy">
+        </div>
+        <span class="cat-card-label">Laminates</span>
+      </div>
+    </div>
+
+    <!-- Row 2: 7 Items -->
+    <div class="categories-grid-row-2">
+      <div class="cat-card-item">
+        <div class="cat-card-box">
+          <img src="https://cdn.madoverbuildings.com/category/category/Hardware_and_Fittings.webp" alt="Hardware and Fittings" loading="lazy">
+        </div>
+        <span class="cat-card-label">Hardware and Fittings</span>
+      </div>
+
+      <div class="cat-card-item">
+        <div class="cat-card-box">
+          <img src="https://cdn.madoverbuildings.com/category/category/Paints,_Putty_and_Coatings.webp" alt="Paints, Putty and Coatings" loading="lazy">
+        </div>
+        <span class="cat-card-label">Paints, Putty and Coatings</span>
+      </div>
+
+      <div class="cat-card-item">
+        <div class="cat-card-box">
+          <img src="https://cdn.madoverbuildings.com/category/category/Tiles.webp" alt="Tiles" loading="lazy">
+        </div>
+        <span class="cat-card-label">Tiles</span>
+      </div>
+
+      <div class="cat-card-item">
+        <div class="cat-card-box">
+          <img src="https://cdn.madoverbuildings.com/category/category/Kitchen.webp" alt="Kitchen" loading="lazy">
+        </div>
+        <span class="cat-card-label">Kitchen</span>
+      </div>
+
+      <div class="cat-card-item">
+        <div class="cat-card-box">
+          <img src="https://cdn.madoverbuildings.com/category/category/Tools,_Equipment_and_Safety.webp" alt="Tools, Equipment and Safety" loading="lazy">
+        </div>
+        <span class="cat-card-label">Tools, Equipment and Safety</span>
+      </div>
+
+      <div class="cat-card-item">
+        <div class="cat-card-box">
+          <img src="https://cdn.madoverbuildings.com/category/category/Heating_and_AC.webp" alt="Heating and AC" loading="lazy">
+        </div>
+        <span class="cat-card-label">Heating and AC</span>
+      </div>
+
+      <div class="cat-card-item">
+        <div class="cat-card-box">
+          <img src="https://cdn.madoverbuildings.com/category/category/Cleaning_and_Housekeeping.webp" alt="Cleaning and Housekeeping" loading="lazy">
+        </div>
+        <span class="cat-card-label">Cleaning and House</span>
+      </div>
+    </div>
+  </div>
 </main>
 
-<!-- ═══ FOOTER ═══ -->
-<footer class="footer">
-  <div class="footer-top">
-    <div class="footer-brand">
-      <img src="https://api.matelioverse.com/assets/e0847d46-2489-475e-8dfc-e7b520e1df15" alt="Matelioverse" class="footer-logo">
-      <p class="footer-tagline">India's Smartest Building Materials Platform.</p>
-      <div class="footer-social">
-        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
-        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2m-.2 2A3.6 3.6 0 004 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5M12 7a5 5 0 110 10 5 5 0 010-10m0 2a3 3 0 100 6 3 3 0 000-6z"/></svg></a>
-        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06c0 4.99 3.66 9.12 8.44 9.88v-6.99H7.9v-2.89h2.54V9.85c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.89h-2.33v6.99C18.34 21.18 22 17.05 22 12.06c0-5.53-4.5-10.02-10-10.02z"/></svg></a>
+<!-- MAIN DARK FOOTER -->
+<footer class="site-dark-footer">
+  <div class="site-container">
+    <div class="footer-top-grid">
+      <div class="footer-brand-col">
+        <div class="footer-logo-wrap">
+          <img src="https://api.matelioverse.com/assets/e0847d46-2489-475e-8dfc-e7b520e1df15" alt="Matelioverse" class="footer-logo-img" width="180" height="34">
+        </div>
+        <div class="footer-materials-h4">India's Smartest Building Materials Platform</div>
+        <p style="font-size: 13px; color: #94A3B8; line-height: 1.5; margin-bottom: 14px; max-width: 320px;">Welcome to the future of construction retail. Reshaping how India sources, supplies, and scales building material needs.</p>
+        <div style="font-size: 13px; color: #64748B; margin-bottom: 4px;">Express Delivery in</div>
+        <div class="footer-hours-gold">1-4 hrs ⚡</div>
+      </div>
+
+      <div>
+        <h4 class="footer-col-h4">COMPANY</h4>
+        <ul class="footer-links-list">
+          <li><a href="/about.html">About us</a></li>
+          <li><a href="/categories.html">Categories & Brands</a></li>
+          <li><a href="/partner.html">Partner With Us</a></li>
+          <li><a href="/rfq.html">Large orders (RFQ)</a></li>
+          <li><a href="/partner.html">CredEzy Line of Credit</a></li>
+          <li><a href="/contact.html">Contact us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-h4">POLICIES & LOYALTY</h4>
+        <ul class="footer-links-list">
+          <li><a href="/about.html">matelioSTAR Loyalty</a></li>
+          <li><a href="/about.html">FAQ's</a></li>
+          <li><a href="#">Cancellation & refund</a></li>
+          <li><a href="#">Return policy</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Terms and conditions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-h4">CONTACT US</h4>
+        <div class="footer-contact-block">
+          <div class="city-contact-group">
+            <div class="city-label-bold">Head Office (Ahmedabad)</div>
+            <p style="font-size: 12.5px; color: #94A3B8; line-height: 1.4; margin-bottom: 6px;">
+              405 Claywalls, OPP. Shanti Palace, Hebatpur Road, Thaltej, Ahmedabad, 380054
+            </p>
+            <a href="tel:+919824939888" class="contact-link-row">
+              <span>📞</span> <span>+91 98249 39888</span>
+            </a>
+          </div>
+
+          <div class="city-contact-group">
+            <div class="city-label-bold">Regional Fulfillment Hubs</div>
+            <a href="https://wa.me/918970415365" class="contact-link-row">
+              <span>💬</span> <span>Bengaluru: +91 89704 15365</span>
+            </a>
+            <a href="tel:+919187702933" class="contact-link-row">
+              <span>📞</span> <span>Mumbai: +91 91877 02933</span>
+            </a>
+          </div>
+
+          <a href="mailto:hello@matelioverse.com" class="contact-link-row" style="margin-top: 6px;">
+            <span>✉️</span> <span>hello@matelioverse.com</span>
+          </a>
+        </div>
       </div>
     </div>
-    <div class="footer-column"><h4>Company</h4><ul><li><a href="/about.html">About Us</a></li><li><a href="/partner.html">Partner With Us</a></li><li><a href="/contact.html">Contact Us</a></li></ul></div>
-    <div class="footer-column"><h4>Policies</h4><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms & Conditions</a></li><li><a href="#">Return Policy</a></li></ul></div>
-    <div class="footer-column"><h4>Contact</h4><ul><li><a href="mailto:info@matelioverse.com">📧 info@matelioverse.com</a></li><li><a href="tel:+918970415365">📞 +91 89704 15365</a></li></ul></div>
+
+    <div class="footer-categories-block">
+      <h4 class="footer-col-h4" style="margin-bottom:0;">Categories</h4>
+      <div class="footer-cat-pills-flex">
+        <a href="/categories.html" class="footer-cat-pill">Building materials</a>
+        <a href="/categories.html" class="footer-cat-pill">Bathroom</a>
+        <a href="/categories.html" class="footer-cat-pill">Plumbing</a>
+        <a href="/categories.html" class="footer-cat-pill">Electrical</a>
+        <a href="/categories.html" class="footer-cat-pill">Lighting</a>
+        <a href="/categories.html" class="footer-cat-pill">Fans</a>
+        <a href="/categories.html" class="footer-cat-pill">Plywood and Boards</a>
+        <a href="/categories.html" class="footer-cat-pill">Laminates</a>
+        <a href="/categories.html" class="footer-cat-pill">Hardware and Fittings</a>
+        <a href="/categories.html" class="footer-cat-pill">Paints, Putty and Coatings</a>
+        <a href="/categories.html" class="footer-cat-pill">Tiles</a>
+        <a href="/categories.html" class="footer-cat-pill">Kitchen</a>
+        <a href="/categories.html" class="footer-cat-pill">Tools, Equipment and Safety</a>
+        <a href="/categories.html" class="footer-cat-pill">Heating and AC</a>
+        <a href="/categories.html" class="footer-cat-pill">Cleaning and House</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <span>© 2025 Matelioverse. All rights reserved. | Backed by Buildverse Group & BuilditIndia | ISO 27001:2022 Certified</span>
+      <div class="footer-social-icons">
+        <a href="https://www.linkedin.com/company/matelioverse/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/matelioverse/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2m-.2 2A3.6 3.6 0 004 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5M12 7a5 5 0 110 10 5 5 0 010-10m0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/matelioverse/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06c0 4.99 3.66 9.12 8.44 9.88v-6.99H7.9v-2.89h2.54V9.85c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.89h-2.33v6.99C18.34 21.18 22 17.05 22 12.06c0-5.53-4.5-10.02-10-10.02z"/></svg>
+        </a>
+      </div>
+    </div>
   </div>
-  <div class="footer-bottom"><div class="footer-bottom-inner"><span class="footer-copyright">© 2025 Matelioverse. All rights reserved.</span><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div></div></div>
 </footer>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const menuBtn = document.getElementById('mobile-menu-btn');
-  const overlay = document.getElementById('mobile-nav-overlay');
-  const drawer = document.getElementById('mobile-nav-drawer');
-  const closeBtn = document.getElementById('mobile-nav-close');
-  function openNav() { overlay.classList.add('active'); drawer.classList.add('active'); document.body.style.overflow='hidden'; }
-  function closeNav() { overlay.classList.remove('active'); drawer.classList.remove('active'); document.body.style.overflow=''; }
-  if(menuBtn)menuBtn.addEventListener('click',openNav);
-  if(overlay)overlay.addEventListener('click',closeNav);
-  if(closeBtn)closeBtn.addEventListener('click',closeNav);
-});
-</script>
+<!-- Login Modal -->
+<div class="mob-modal-overlay" id="login-modal" onclick="if(event.target===this){this.classList.remove('active'); document.body.style.overflow='';}">
+  <div class="mob-modal-card">
+    <button class="mob-modal-close-btn" id="login-modal-close" aria-label="Close modal" onclick="document.getElementById('login-modal').classList.remove('active'); document.body.style.overflow='';">✕</button>
+    <div class="mob-modal-title">Log in or sign up</div>
+    <form onsubmit="event.preventDefault(); alert('OTP sent successfully to your mobile!');">
+      <label class="mob-form-label">Business mobile (for OTP) <span style="color: #EF4444;">*</span></label>
+      <div class="mob-phone-input-wrap">
+        <div class="mob-country-code">🇮🇳 +91</div>
+        <input type="tel" class="mob-phone-input" placeholder="Enter Phone Number" required pattern="[0-9]{10}">
+      </div>
+      <button type="submit" class="mob-btn-send-otp active">SEND OTP</button>
+    </form>
+  </div>
+</div>
+
+<script type="module" src="./script.js"></script>
 </body>
 </html>

@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroCarousel();
   initSearchPlaceholder();
   initAddButtons();
+  initLoginModal();
 });
 
 /* ── Hero Carousel (Auto-rotation & Dot Navigation) ── */
@@ -59,7 +60,7 @@ function initHeroCarousel() {
 
 /* ── Rotating Search Placeholder ── */
 function initSearchPlaceholder() {
-  const input = document.getElementById('top-search-input');
+  const input = document.getElementById('nav-search-input') || document.getElementById('top-search-input');
   if (!input) return;
 
   const searchPhrases = [
@@ -81,6 +82,36 @@ function initSearchPlaceholder() {
     phraseIndex = (phraseIndex + 1) % searchPhrases.length;
     input.setAttribute('placeholder', searchPhrases[phraseIndex]);
   }, 2800);
+}
+
+/* ── Login / Sign Up Modal Trigger ── */
+function initLoginModal() {
+  const modal = document.getElementById('login-modal');
+  const closeBtn = document.getElementById('login-modal-close');
+  if (!modal) return;
+
+  const triggers = document.querySelectorAll('#login-trigger-btn, #nav-login-btn, .btn-solid-green-login, .nav-login-pill');
+
+  function openModal() {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  triggers.forEach(btn => btn.addEventListener('click', openModal));
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+  });
 }
 
 /* ── Horizontal Product Carousel Scroll ── */

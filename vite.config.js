@@ -14,6 +14,7 @@ export default defineConfig({
         categories: resolve(__dirname, 'categories.html'),
         partner: resolve(__dirname, 'partner.html'),
         contact: resolve(__dirname, 'contact.html'),
+        rfq: resolve(__dirname, 'rfq.html'),
       },
     },
   },
