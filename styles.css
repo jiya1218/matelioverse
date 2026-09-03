@@ -843,27 +843,32 @@ img {
 }
 
 .brand-showcase-card {
-  background: var(--bg-sky);
-  border-radius: 18px;
-  padding: 24px 16px 16px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 18px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  height: 250px;
+  justify-content: center;
+  height: 120px;
   text-decoration: none;
-  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
 .brand-showcase-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(24, 144, 255, 0.12);
+  transform: translateY(-3px);
+  border-color: var(--primary-green);
+  box-shadow: 0 8px 20px rgba(0, 168, 107, 0.12);
 }
 
 .brand-showcase-logo {
-  max-height: 38px;
-  max-width: 120px;
+  max-height: 42px;
+  max-width: 130px;
+  width: auto;
   object-fit: contain;
+  margin-bottom: 6px;
 }
 
 .brand-showcase-product {
@@ -2426,20 +2431,33 @@ img {
     padding: 10px 0 6px !important;
   }
 
-  /* ── Exact 3-Column Categories Grid on Mobile (1:1 with MOB App) ── */
+  /* ── Horizontally Scrollable Categories Rows on Mobile (Smooth Touch Swipe) ── */
   .categories-section {
     padding: 16px 0 12px !important;
   }
 
   .categories-grid-row-1,
   .categories-grid-row-2 {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 10px !important;
-    margin-bottom: 10px !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 12px !important;
+    padding: 4px 2px 12px 2px !important;
+    scrollbar-width: none !important;
+    margin-bottom: 8px !important;
+  }
+
+  .categories-grid-row-1::-webkit-scrollbar,
+  .categories-grid-row-2::-webkit-scrollbar {
+    display: none !important;
   }
 
   .cat-card-item {
+    flex: 0 0 88px !important;
+    max-width: 88px !important;
+    scroll-snap-align: start !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -2448,11 +2466,10 @@ img {
   }
 
   .cat-card-box {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 1 / 1 !important;
+    width: 88px !important;
+    height: 88px !important;
     background-color: #FEF6E6 !important;
-    border-radius: 16px !important;
+    border-radius: 18px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -2466,10 +2483,10 @@ img {
   }
 
   .cat-card-box img {
-    width: 65px !important;
-    height: 65px !important;
-    max-width: 85% !important;
-    max-height: 85% !important;
+    width: 62px !important;
+    height: 62px !important;
+    max-width: 90% !important;
+    max-height: 90% !important;
     object-fit: contain !important;
   }
 
@@ -2483,6 +2500,8 @@ img {
     -webkit-line-clamp: 2 !important;
     -webkit-box-orient: vertical !important;
     overflow: hidden !important;
+    width: 100% !important;
+    text-align: center !important;
   }
 
   /* ── Dual Promotional Banners on Mobile ── */
@@ -2592,25 +2611,38 @@ img {
 
   /* ── Popular Brands Swipe on Mobile ── */
   .popular-brands-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    gap: 10px;
-    padding: 4px 2px 12px 2px;
-    scrollbar-width: none;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 12px !important;
+    padding: 4px 2px 14px 2px !important;
+    scrollbar-width: none !important;
   }
 
   .popular-brands-grid::-webkit-scrollbar {
-    display: none;
+    display: none !important;
   }
 
-  .brand-tall-card {
-    flex: 0 0 135px;
-    scroll-snap-align: start;
-    height: 150px;
-    padding: 12px 8px;
-    border-radius: 14px;
+  .brand-showcase-card {
+    flex: 0 0 145px !important;
+    max-width: 145px !important;
+    height: 105px !important;
+    padding: 14px 12px !important;
+    border-radius: 16px !important;
+    scroll-snap-align: start !important;
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .brand-showcase-logo {
+    max-height: 36px !important;
+    max-width: 110px !important;
   }
 
   .brand-logo-slot img {
