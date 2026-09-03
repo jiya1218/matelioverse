@@ -65,15 +65,15 @@ function initSearchPlaceholder() {
   if (!input) return;
 
   const searchPhrases = [
-    'Search "electrical wires"',
-    'Search "cements"',
-    'Search "Fevicol"',
-    'Search "bathroom tiles"',
-    'Search "TMT bars"',
-    'Search "CPVC pipes"',
-    'Search "Asian Paints"',
-    'Search "ceiling fans"',
-    'Search "plywood"'
+    'Search "TileTrendz"',
+    'Search "EzyWall AAC Panels"',
+    'Search "Tuffar TMT Bars"',
+    'Search "CemXtra Cement"',
+    'Search "Sanivo Sanitaryware"',
+    'Search "HydroLine Pipes"',
+    'Search "Strongfab Steel"',
+    'Search "ReflectoGlass"',
+    'Search "Bondex Adhesives"'
   ];
 
   let phraseIndex = 0;

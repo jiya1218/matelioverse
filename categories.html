@@ -2,22 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Categories & Brands | Matelioverse</title>
-  <meta name="description" content="Explore verified building materials across all 15 categories with 1-4 hour express delivery.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Categories &amp; Brands | Matelioverse — India’s Smartest Building Materials Platform</title>
+  <meta name="description" content="Explore Matelioverse proprietary brands & categories: CemXtra, EzyWall AAC Panels, Tuffar TMT, TileTrendz, HydroLine, Sanivo, Strongfab, ReflectoGlass, and more. Backed by BuilditIndia.">
+  <link rel="icon" href="https://matelioverse.com/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- STICKY DOUBLE HEADER -->
+<!-- STICKY HEADER -->
 <header class="site-header" id="site-header">
-  <!-- Top Main Navigation Bar -->
   <div class="top-nav">
     <div class="site-container top-nav-inner">
-      <!-- Left: Mobile Hamburger & Logo -->
       <div class="nav-left-group">
         <button type="button" class="mob-hamburger-btn" id="mob-hamburger-btn" aria-label="Open Navigation Menu" onclick="document.getElementById('mobile-drawer').classList.add('active'); document.body.style.overflow='hidden';">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -25,24 +21,20 @@
         <a href="/" class="brand-logo-wrap" aria-label="Matelioverse Homepage">
           <img src="https://api.matelioverse.com/assets/e0847d46-2489-475e-8dfc-e7b520e1df15" alt="Matelioverse" class="brand-logo-img" width="160" height="30">
         </a>
-
-        <!-- Delivery location picker (Desktop) -->
-        <div class="delivery-picker-btn" id="delivery-picker">
+        <a href="https://builditindia.com/" target="_blank" rel="noopener" class="delivery-picker-btn" style="text-decoration: none;">
           <div class="delivery-lightning">⚡</div>
           <div class="delivery-text-wrap">
             <div class="delivery-title-row">
-              <span>1-4 hrs delivery</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6"/></svg>
+              <span>Backed by BuilditIndia</span>
             </div>
-            <div class="delivery-location-row">Bengaluru, Karnataka, India</div>
+            <div class="delivery-location-row">From Bricks to Clicks ▾</div>
           </div>
-        </div>
+        </a>
       </div>
 
-      <!-- Center: Search bar with AI button -->
       <div class="top-search-wrap">
         <div class="top-search-inner">
-          <input type="search" id="top-search-input" class="top-search-input" placeholder='Search "tiles"' autocomplete="off" aria-label="Search building materials">
+          <input type="search" id="top-search-input" class="top-search-input" placeholder='Search "TileTrendz"' autocomplete="off" aria-label="Search Matelioverse categories and brands">
           <button type="button" class="top-search-ai-btn" aria-label="Search with AI">
             <svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1.27c.34-.6.99-1 1.73-1a2 2 0 010 4c-.74 0-1.39-.4-1.73-1H20a7 7 0 01-7 7v1.27c.6.34 1 .99 1 1.73a2 2 0 01-4 0c0-.74.4-1.39 1-1.73V23a7 7 0 01-7-7H2.73c-.34.6-.99 1-1.73 1a2 2 0 010-4c.74 0 1.39.4 1.73 1H4a7 7 0 017-7V5.73c-.6-.34-1-.99-1-1.73a2 2 0 012-2z"/></svg>
             <span>AI</span>
@@ -50,68 +42,53 @@
         </div>
       </div>
 
-      <!-- Right: Referral, Login, Cart -->
       <div class="top-nav-actions">
-        <a href="/partner.html" class="referral-pill-btn" aria-label="Refer and Earn">
-          <span class="referral-gift-icon">🎁</span>
+        <a href="/partner.html" class="referral-pill-btn" aria-label="Partner With Us">
+          <span class="referral-gift-icon">🤝</span>
           <div class="referral-text-stack">
-            <span class="referral-label-sm">Get</span>
-            <span class="referral-label-lg">₹1000</span>
+            <span class="referral-label-sm">Join</span>
+            <span class="referral-label-lg">Partner</span>
           </div>
         </a>
-
         <button type="button" class="nav-login-pill" id="nav-login-btn" onclick="document.getElementById('login-modal').classList.add('active'); document.body.style.overflow='hidden';">Login</button>
-
-        <a href="/categories.html" class="nav-cart-btn" aria-label="Shopping Cart">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
-          <span>Cart</span>
+        <a href="/contact.html" class="nav-cart-btn" aria-label="Inquire">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          <span>Inquire</span>
         </a>
       </div>
     </div>
   </div>
 
-  <!-- Mobile Sub-Bar: Delivery Location Strip (Mobile Only) -->
   <div class="mob-delivery-strip">
     <div class="site-container mob-delivery-strip-inner">
       <div class="mob-delivery-badge">
-        <span class="bolt">⚡</span> 1-4 hrs delivery
+        <span class="bolt">⚡</span> From Bricks to Clicks
       </div>
       <div class="mob-delivery-loc-text">
-        Bengaluru, Karnataka, India <span class="chevron">▾</span>
+        India First · World Ready <span class="chevron">▾</span>
       </div>
     </div>
   </div>
 
-  <!-- Mobile Subpage Back Header (Mobile Only) -->
   <div class="mob-page-header">
     <a href="/" class="mob-back-btn" aria-label="Back to home">‹</a>
-    <span class="mob-page-title">All Categories</span>
+    <span class="mob-page-title">Categories &amp; Brands</span>
   </div>
 
-  <!-- Secondary Sub-Nav Row -->
   <div class="sub-nav">
     <div class="site-container sub-nav-inner">
       <div class="sub-nav-left categories-nav-item">
-        <a href="/categories.html" class="sub-nav-link cat-dropdown-trigger active" style="display:flex;align-items:center;gap:6px;text-decoration:none;color:var(--primary-green);font-weight:700;font-size:13.5px;">
+        <a href="/categories.html" class="sub-nav-link cat-dropdown-trigger" style="display:flex;align-items:center;gap:6px;text-decoration:none;color:var(--primary-green);font-weight:700;font-size:13.5px;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 10h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 16h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4z"/></svg>
-          <span>Categories</span>
-          <span class="cat-arrow-down">▾</span>
+          <span>Categories &amp; Brands</span>
         </a>
-        <div class="categories-dropdown-menu">
-          <a href="/categories.html" class="cat-dropdown-item">Building materials <span>›</span></a>
-          <a href="/categories.html" class="cat-dropdown-item">Bathroom <span>›</span></a>
-          <a href="/categories.html" class="cat-dropdown-item">Plumbing <span>›</span></a>
-          <a href="/categories.html" class="cat-dropdown-item">Electrical <span>›</span></a>
-          <a href="/categories.html" class="cat-dropdown-item">Lighting <span>›</span></a>
-          <a href="/categories.html" class="cat-dropdown-item">Tiles <span>›</span></a>
-          <a href="/categories.html" class="cat-dropdown-item">Hardware & Fittings <span>›</span></a>
-          <a href="/categories.html" class="cat-dropdown-item">Paints, Putty & Coatings <span>›</span></a>
-        </div>
       </div>
 
       <div class="sub-nav-right-links">
-        <a href="/contact.html" class="sub-link">Contact us</a>
-        <a href="/rfq.html" class="sub-link">Large order (RFQ)</a>
+        <a href="/about.html" class="sub-link">About Us</a>
+        <a href="/partner.html" class="sub-link">Partner With Us</a>
+        <a href="/categories.html" class="sub-link" style="color:var(--primary-green); font-weight:700;">Categories</a>
+        <a href="/contact.html" class="sub-link">Contact Us</a>
         <a href="/partner.html" class="matelio-star-pill">
           <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           <span>matelio STAR</span>
@@ -121,133 +98,112 @@
   </div>
 </header>
 
-<main style="background: #F8FAFC; padding: 32px 0 60px 0; min-height: 80vh;">
-  <div class="site-container">
-    <div class="breadcrumb-row">
-      <a href="/">home</a>
-      <span>&gt;</span>
-      <span style="color: #0F172A; font-weight: 600;">categories</span>
+<main>
+  <!-- BREADCRUMBS & TITLE BANNER -->
+  <div class="site-container" style="padding-top: 24px; padding-bottom: 12px;">
+    <div class="contact-breadcrumbs">
+      <a href="/">Home</a> <span>›</span> <span class="active">Categories &amp; Brands</span>
+    </div>
+    <div style="margin-top: 12px; margin-bottom: 24px;">
+      <h1 class="section-title-h2" style="font-size: 32px; margin-bottom: 6px;">Proprietary Brands &amp; Material Categories</h1>
+      <p style="color: #64748B; font-size: 14.5px;">Curated, verified building materials with direct manufacturer pricing and guaranteed quality standards.</p>
     </div>
 
-    <div style="margin-bottom: 28px;">
-      <h1 style="font-size: 28px; font-weight: 800; color: #0F172A; margin-bottom: 6px;">All Categories</h1>
-      <p style="font-size: 14px; color: #64748B;">Explore verified materials across 15 specialized construction & interior categories</p>
-    </div>
-
-    <!-- Category Grid Matching MOB 1:1 -->
-    <div class="categories-grid-row-1" style="margin-bottom: 16px;">
-      <div class="cat-card-item">
-        <div class="cat-card-box">
-          <img src="https://cdn.madoverbuildings.com/category/category/Building_Materials.webp" alt="Building materials" loading="lazy">
+    <!-- 3-COLUMN CREAM CARDS GRID (MOB Design Style, Matelioverse Content) -->
+    <div class="all-categories-full-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 48px;">
+      <!-- Cat 1: CemXtra -->
+      <div class="cat-card-item" style="border: 1px solid #E2E8F0; border-radius: 18px; padding: 16px; background: #FFFFFF; text-align: left; align-items: flex-start;">
+        <div class="cat-card-box" style="width: 100%; height: 180px; background: #FEF6E6; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+          <img src="https://api.matelioverse.com/assets/6fc2347c-85cc-4649-93d8-b1f0b241be85" alt="CemXtra Cement & GGBS" style="max-height: 140px; width: auto; object-fit: contain;">
         </div>
-        <span class="cat-card-label">Building materials</span>
+        <div style="font-size: 18px; font-weight: 800; color: #0F172A; margin-bottom: 4px;">CemXtra</div>
+        <p style="font-size: 13px; color: #64748B; line-height: 1.5; margin-bottom: 12px;">High-grade OPC, PPC, GGBS &amp; specialized concrete admixtures for heavy construction.</p>
+        <a href="/contact.html" style="font-size: 12.5px; font-weight: 700; color: var(--primary-green); text-decoration: none;">Request Pricing / BOQ ›</a>
       </div>
 
-      <div class="cat-card-item">
-        <div class="cat-card-box">
-          <img src="https://cdn.madoverbuildings.com/category/category/Bathroom.webp" alt="Bathroom" loading="lazy">
+      <!-- Cat 2: EzyWall -->
+      <div class="cat-card-item" style="border: 1px solid #E2E8F0; border-radius: 18px; padding: 16px; background: #FFFFFF; text-align: left; align-items: flex-start;">
+        <div class="cat-card-box" style="width: 100%; height: 180px; background: #FEF6E6; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+          <img src="https://api.matelioverse.com/assets/3b959418-6bf3-4ba9-bf2a-c0c70745495e" alt="EzyWall AAC Panels" style="max-height: 140px; width: auto; object-fit: contain;">
         </div>
-        <span class="cat-card-label">Bathroom</span>
+        <div style="font-size: 18px; font-weight: 800; color: #0F172A; margin-bottom: 4px;">EzyWall</div>
+        <p style="font-size: 13px; color: #64748B; line-height: 1.5; margin-bottom: 12px;">Lightweight autoclaved aerated concrete (AAC) wall panels and precision blocks.</p>
+        <a href="/contact.html" style="font-size: 12.5px; font-weight: 700; color: var(--primary-green); text-decoration: none;">Request Pricing / BOQ ›</a>
       </div>
 
-      <div class="cat-card-item">
-        <div class="cat-card-box">
-          <img src="https://cdn.madoverbuildings.com/category/category/Plumbing.webp" alt="Plumbing" loading="lazy">
+      <!-- Cat 3: Tuffar -->
+      <div class="cat-card-item" style="border: 1px solid #E2E8F0; border-radius: 18px; padding: 16px; background: #FFFFFF; text-align: left; align-items: flex-start;">
+        <div class="cat-card-box" style="width: 100%; height: 180px; background: #FEF6E6; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+          <img src="https://api.matelioverse.com/assets/ca5b4b50-81fb-4104-861e-3d0dc9dded46" alt="Tuffar TMT Steel" style="max-height: 140px; width: auto; object-fit: contain;">
         </div>
-        <span class="cat-card-label">Plumbing</span>
+        <div style="font-size: 18px; font-weight: 800; color: #0F172A; margin-bottom: 4px;">Tuffar TMT Rebars</div>
+        <p style="font-size: 13px; color: #64748B; line-height: 1.5; margin-bottom: 12px;">High-ductility Fe550D and Fe500D TMT earthquake-resistant reinforcement bars.</p>
+        <a href="/contact.html" style="font-size: 12.5px; font-weight: 700; color: var(--primary-green); text-decoration: none;">Request Pricing / BOQ ›</a>
       </div>
 
-      <div class="cat-card-item">
-        <div class="cat-card-box">
-          <img src="https://cdn.madoverbuildings.com/category/category/Electrical.webp" alt="Electrical" loading="lazy">
+      <!-- Cat 4: TileTrendz -->
+      <div class="cat-card-item" style="border: 1px solid #E2E8F0; border-radius: 18px; padding: 16px; background: #FFFFFF; text-align: left; align-items: flex-start;">
+        <div class="cat-card-box" style="width: 100%; height: 180px; background: #FEF6E6; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+          <img src="https://api.matelioverse.com/assets/8a7d5881-6db1-49dc-a2ee-0639d8a0873a" alt="TileTrendz Tiles" style="max-height: 140px; width: auto; object-fit: contain;">
         </div>
-        <span class="cat-card-label">Electrical</span>
+        <div style="font-size: 18px; font-weight: 800; color: #0F172A; margin-bottom: 4px;">TileTrendz</div>
+        <p style="font-size: 13px; color: #64748B; line-height: 1.5; margin-bottom: 12px;">Glazed vitrified tiles (GVT), PGVT, porcelain slabs, and outdoor paver finishes.</p>
+        <a href="/contact.html" style="font-size: 12.5px; font-weight: 700; color: var(--primary-green); text-decoration: none;">Request Pricing / BOQ ›</a>
       </div>
 
-      <div class="cat-card-item">
-        <div class="cat-card-box">
-          <img src="https://cdn.madoverbuildings.com/category/category/Lighting.webp" alt="Lighting" loading="lazy">
+      <!-- Cat 5: HydroLine -->
+      <div class="cat-card-item" style="border: 1px solid #E2E8F0; border-radius: 18px; padding: 16px; background: #FFFFFF; text-align: left; align-items: flex-start;">
+        <div class="cat-card-box" style="width: 100%; height: 180px; background: #FEF6E6; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+          <img src="https://api.matelioverse.com/assets/076196ba-088b-451d-8a9f-82d7c091a5f7" alt="HydroLine Pipes" style="max-height: 140px; width: auto; object-fit: contain;">
         </div>
-        <span class="cat-card-label">Lighting</span>
+        <div style="font-size: 18px; font-weight: 800; color: #0F172A; margin-bottom: 4px;">HydroLine / Hydraflo</div>
+        <p style="font-size: 13px; color: #64748B; line-height: 1.5; margin-bottom: 12px;">CPVC, UPVC, SWR plumbing pipes and engineered leak-proof drainage fittings.</p>
+        <a href="/contact.html" style="font-size: 12.5px; font-weight: 700; color: var(--primary-green); text-decoration: none;">Request Pricing / BOQ ›</a>
       </div>
 
-      <div class="cat-card-item">
-        <div class="cat-card-box">
-          <img src="https://cdn.madoverbuildings.com/category/category/Fans.webp" alt="Fans" loading="lazy">
+      <!-- Cat 6: Sanivo -->
+      <div class="cat-card-item" style="border: 1px solid #E2E8F0; border-radius: 18px; padding: 16px; background: #FFFFFF; text-align: left; align-items: flex-start;">
+        <div class="cat-card-box" style="width: 100%; height: 180px; background: #FEF6E6; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+          <img src="https://api.matelioverse.com/assets/1d6608fe-7a8d-46d2-99c4-da90b7498d50" alt="Sanivo Sanitaryware" style="max-height: 140px; width: auto; object-fit: contain;">
         </div>
-        <span class="cat-card-label">Fans</span>
+        <div style="font-size: 18px; font-weight: 800; color: #0F172A; margin-bottom: 4px;">Sanivo / Nirvio</div>
+        <p style="font-size: 13px; color: #64748B; line-height: 1.5; margin-bottom: 12px;">Architectural chrome CP faucets, wall-hung sanitaryware, and smart vanities.</p>
+        <a href="/contact.html" style="font-size: 12.5px; font-weight: 700; color: var(--primary-green); text-decoration: none;">Request Pricing / BOQ ›</a>
       </div>
 
-      <div class="cat-card-item">
-        <div class="cat-card-box">
-          <img src="https://cdn.madoverbuildings.com/category/category/Plywood_and_Boards.webp" alt="Plywood and Boards" loading="lazy">
+      <!-- Cat 7: Strongfab -->
+      <div class="cat-card-item" style="border: 1px solid #E2E8F0; border-radius: 18px; padding: 16px; background: #FFFFFF; text-align: left; align-items: flex-start;">
+        <div class="cat-card-box" style="width: 100%; height: 180px; background: #FEF6E6; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+          <img src="https://api.matelioverse.com/assets/c232adb3-0a14-4f54-b28d-0ccdbd18a88b" alt="Strongfab Fabrication" style="max-height: 140px; width: auto; object-fit: contain;">
         </div>
-        <span class="cat-card-label">Plywood and Boards</span>
+        <div style="font-size: 18px; font-weight: 800; color: #0F172A; margin-bottom: 4px;">Strongfab</div>
+        <p style="font-size: 13px; color: #64748B; line-height: 1.5; margin-bottom: 12px;">Custom structural steel columns, pre-engineered building (PEB) sections &amp; plates.</p>
+        <a href="/contact.html" style="font-size: 12.5px; font-weight: 700; color: var(--primary-green); text-decoration: none;">Request Pricing / BOQ ›</a>
       </div>
 
-      <div class="cat-card-item">
-        <div class="cat-card-box">
-          <img src="https://cdn.madoverbuildings.com/category/category/Laminates.webp" alt="Laminates" loading="lazy">
+      <!-- Cat 8: ReflectoGlass -->
+      <div class="cat-card-item" style="border: 1px solid #E2E8F0; border-radius: 18px; padding: 16px; background: #FFFFFF; text-align: left; align-items: flex-start;">
+        <div class="cat-card-box" style="width: 100%; height: 180px; background: #FEF6E6; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+          <img src="https://api.matelioverse.com/assets/74913a3c-32b8-40c3-918a-de641df70d38" alt="ReflectoGlass" style="max-height: 140px; width: auto; object-fit: contain;">
         </div>
-        <span class="cat-card-label">Laminates</span>
-      </div>
-    </div>
-
-    <!-- Row 2: 7 Items -->
-    <div class="categories-grid-row-2">
-      <div class="cat-card-item">
-        <div class="cat-card-box">
-          <img src="https://cdn.madoverbuildings.com/category/category/Hardware_and_Fittings.webp" alt="Hardware and Fittings" loading="lazy">
-        </div>
-        <span class="cat-card-label">Hardware and Fittings</span>
+        <div style="font-size: 18px; font-weight: 800; color: #0F172A; margin-bottom: 4px;">ReflectoGlass</div>
+        <p style="font-size: 13px; color: #64748B; line-height: 1.5; margin-bottom: 12px;">Energy-efficient Low-E architectural glass, tempered safety panels &amp; mirrors.</p>
+        <a href="/contact.html" style="font-size: 12.5px; font-weight: 700; color: var(--primary-green); text-decoration: none;">Request Pricing / BOQ ›</a>
       </div>
 
-      <div class="cat-card-item">
-        <div class="cat-card-box">
-          <img src="https://cdn.madoverbuildings.com/category/category/Paints,_Putty_and_Coatings.webp" alt="Paints, Putty and Coatings" loading="lazy">
+      <!-- Cat 9: Xtra-Cam -->
+      <div class="cat-card-item" style="border: 1px solid #E2E8F0; border-radius: 18px; padding: 16px; background: #FFFFFF; text-align: left; align-items: flex-start;">
+        <div class="cat-card-box" style="width: 100%; height: 180px; background: #FEF6E6; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+          <img src="https://api.matelioverse.com/assets/5fdb7ac5-124f-4c22-af5b-dc0876af9aea" alt="Xtra-Cam Site Security" style="max-height: 140px; width: auto; object-fit: contain;">
         </div>
-        <span class="cat-card-label">Paints, Putty and Coatings</span>
-      </div>
-
-      <div class="cat-card-item">
-        <div class="cat-card-box">
-          <img src="https://cdn.madoverbuildings.com/category/category/Tiles.webp" alt="Tiles" loading="lazy">
-        </div>
-        <span class="cat-card-label">Tiles</span>
-      </div>
-
-      <div class="cat-card-item">
-        <div class="cat-card-box">
-          <img src="https://cdn.madoverbuildings.com/category/category/Kitchen.webp" alt="Kitchen" loading="lazy">
-        </div>
-        <span class="cat-card-label">Kitchen</span>
-      </div>
-
-      <div class="cat-card-item">
-        <div class="cat-card-box">
-          <img src="https://cdn.madoverbuildings.com/category/category/Tools,_Equipment_and_Safety.webp" alt="Tools, Equipment and Safety" loading="lazy">
-        </div>
-        <span class="cat-card-label">Tools, Equipment and Safety</span>
-      </div>
-
-      <div class="cat-card-item">
-        <div class="cat-card-box">
-          <img src="https://cdn.madoverbuildings.com/category/category/Heating_and_AC.webp" alt="Heating and AC" loading="lazy">
-        </div>
-        <span class="cat-card-label">Heating and AC</span>
-      </div>
-
-      <div class="cat-card-item">
-        <div class="cat-card-box">
-          <img src="https://cdn.madoverbuildings.com/category/category/Cleaning_and_Housekeeping.webp" alt="Cleaning and Housekeeping" loading="lazy">
-        </div>
-        <span class="cat-card-label">Cleaning and House</span>
+        <div style="font-size: 18px; font-weight: 800; color: #0F172A; margin-bottom: 4px;">Xtra-Cam</div>
+        <p style="font-size: 13px; color: #64748B; line-height: 1.5; margin-bottom: 12px;">Site surveillance, smart AI analytics cameras, and construction asset monitoring.</p>
+        <a href="/contact.html" style="font-size: 12.5px; font-weight: 700; color: var(--primary-green); text-decoration: none;">Request Pricing / BOQ ›</a>
       </div>
     </div>
   </div>
 </main>
 
-<!-- MAIN DARK FOOTER -->
 <footer class="site-dark-footer">
   <div class="site-container">
     <div class="footer-top-grid">
@@ -256,32 +212,31 @@
           <img src="https://api.matelioverse.com/assets/e0847d46-2489-475e-8dfc-e7b520e1df15" alt="Matelioverse" class="footer-logo-img" width="180" height="34">
         </div>
         <div class="footer-materials-h4">India's Smartest Building Materials Platform</div>
-        <p style="font-size: 13px; color: #94A3B8; line-height: 1.5; margin-bottom: 14px; max-width: 320px;">Welcome to the future of construction retail. Reshaping how India sources, supplies, and scales building material needs.</p>
-        <div style="font-size: 13px; color: #64748B; margin-bottom: 4px;">Express Delivery in</div>
-        <div class="footer-hours-gold">1-4 hrs ⚡</div>
+        <p style="font-size: 13px; color: #94A3B8; line-height: 1.5; margin-bottom: 14px; max-width: 320px;">
+          Designed to scale globally. We’re creating a borderless infrastructure commerce engine.
+        </p>
+        <div style="font-size: 12.5px; color: #64748B;">Powered By</div>
+        <div style="color: #34D399; font-weight: 800; font-size: 15px; margin-top: 2px;">BuilditIndia.com</div>
       </div>
 
       <div>
-        <h4 class="footer-col-h4">COMPANY</h4>
+        <h4 class="footer-col-h4">QUICK LINKS</h4>
         <ul class="footer-links-list">
-          <li><a href="/about.html">About us</a></li>
-          <li><a href="/categories.html">Categories & Brands</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/categories.html">Categories &amp; Brands</a></li>
           <li><a href="/partner.html">Partner With Us</a></li>
-          <li><a href="/rfq.html">Large orders (RFQ)</a></li>
-          <li><a href="/partner.html">CredEzy Line of Credit</a></li>
-          <li><a href="/contact.html">Contact us</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
         </ul>
       </div>
 
       <div>
-        <h4 class="footer-col-h4">POLICIES & LOYALTY</h4>
+        <h4 class="footer-col-h4">PRIVATE LABELS</h4>
         <ul class="footer-links-list">
-          <li><a href="/about.html">matelioSTAR Loyalty</a></li>
-          <li><a href="/about.html">FAQ's</a></li>
-          <li><a href="#">Cancellation & refund</a></li>
-          <li><a href="#">Return policy</a></li>
-          <li><a href="#">Privacy policy</a></li>
-          <li><a href="#">Terms and conditions</a></li>
+          <li><a href="/categories.html">CemXtra Cement</a></li>
+          <li><a href="/categories.html">EzyWall AAC Panels</a></li>
+          <li><a href="/categories.html">Tuffar TMT Steel</a></li>
+          <li><a href="/categories.html">TileTrendz Tiles</a></li>
+          <li><a href="/categories.html">HydroLine Piping</a></li>
         </ul>
       </div>
 
@@ -291,169 +246,88 @@
           <div class="city-contact-group">
             <div class="city-label-bold">Head Office (Ahmedabad)</div>
             <p style="font-size: 12.5px; color: #94A3B8; line-height: 1.4; margin-bottom: 6px;">
-              405 Claywalls, OPP. Shanti Palace, Hebatpur Road, Thaltej, Ahmedabad, 380054
+              405 Claywalls, OPP. Shanti Palace, Hebatpur Road, Thaltej, Ahmedabad, Gujarat 380054
             </p>
             <a href="tel:+919824939888" class="contact-link-row">
               <span>📞</span> <span>+91 98249 39888</span>
             </a>
           </div>
-
-          <div class="city-contact-group">
-            <div class="city-label-bold">Regional Fulfillment Hubs</div>
-            <a href="https://wa.me/918970415365" class="contact-link-row">
-              <span>💬</span> <span>Bengaluru: +91 89704 15365</span>
-            </a>
-            <a href="tel:+919187702933" class="contact-link-row">
-              <span>📞</span> <span>Mumbai: +91 91877 02933</span>
-            </a>
-          </div>
-
-          <a href="mailto:hello@matelioverse.com" class="contact-link-row" style="margin-top: 6px;">
+          <a href="mailto:hello@matelioverse.com" class="contact-link-row" style="margin-top: 8px;">
             <span>✉️</span> <span>hello@matelioverse.com</span>
           </a>
         </div>
       </div>
     </div>
 
-    <div class="footer-categories-block">
-      <h4 class="footer-col-h4" style="margin-bottom:0;">Categories</h4>
-      <div class="footer-cat-pills-flex">
-        <a href="/categories.html" class="footer-cat-pill">Building materials</a>
-        <a href="/categories.html" class="footer-cat-pill">Bathroom</a>
-        <a href="/categories.html" class="footer-cat-pill">Plumbing</a>
-        <a href="/categories.html" class="footer-cat-pill">Electrical</a>
-        <a href="/categories.html" class="footer-cat-pill">Lighting</a>
-        <a href="/categories.html" class="footer-cat-pill">Fans</a>
-        <a href="/categories.html" class="footer-cat-pill">Plywood and Boards</a>
-        <a href="/categories.html" class="footer-cat-pill">Laminates</a>
-        <a href="/categories.html" class="footer-cat-pill">Hardware and Fittings</a>
-        <a href="/categories.html" class="footer-cat-pill">Paints, Putty and Coatings</a>
-        <a href="/categories.html" class="footer-cat-pill">Tiles</a>
-        <a href="/categories.html" class="footer-cat-pill">Kitchen</a>
-        <a href="/categories.html" class="footer-cat-pill">Tools, Equipment and Safety</a>
-        <a href="/categories.html" class="footer-cat-pill">Heating and AC</a>
-        <a href="/categories.html" class="footer-cat-pill">Cleaning and House</a>
-      </div>
-    </div>
-
     <div class="footer-bottom-bar">
-      <span>© 2025 Matelioverse. All rights reserved. | Backed by Buildverse Group & BuilditIndia | ISO 27001:2022 Certified</span>
-      <div class="footer-social-icons">
-        <a href="https://www.linkedin.com/company/matelioverse/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/matelioverse/" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2m-.2 2A3.6 3.6 0 004 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5M12 7a5 5 0 110 10 5 5 0 010-10m0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
-        </a>
-        <a href="https://www.facebook.com/matelioverse/" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06c0 4.99 3.66 9.12 8.44 9.88v-6.99H7.9v-2.89h2.54V9.85c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.89h-2.33v6.99C18.34 21.18 22 17.05 22 12.06c0-5.53-4.5-10.02-10-10.02z"/></svg>
-        </a>
+      <p class="footer-copy-text">© Copyright 2025, All Rights Reserved by <span style="color:#00A86B; font-weight:700;">Matelioverse</span> · Powered by BuilditIndia</p>
+      <div class="footer-legal-links">
+        <a href="/contact.html">Terms of Use</a>
+        <span>·</span>
+        <a href="/contact.html">Privacy Policy</a>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- Login Modal -->
-<div class="mob-modal-overlay" id="login-modal" onclick="if(event.target===this){this.classList.remove('active'); document.body.style.overflow='';}">
-  <div class="mob-modal-card">
-    <button class="mob-modal-close-btn" id="login-modal-close" aria-label="Close modal" onclick="document.getElementById('login-modal').classList.remove('active'); document.body.style.overflow='';">✕</button>
-    <div class="mob-modal-title">Log in or sign up</div>
-    <form onsubmit="event.preventDefault(); alert('OTP sent successfully to your mobile!');">
-      <label class="mob-form-label">Business mobile (for OTP) <span style="color: #EF4444;">*</span></label>
-      <div class="mob-phone-input-wrap">
-        <div class="mob-country-code">🇮🇳 +91</div>
-        <input type="tel" class="mob-phone-input" placeholder="Enter Phone Number" required pattern="[0-9]{10}">
-      </div>
-      <button type="submit" class="mob-btn-send-otp active">SEND OTP</button>
-    </form>
-  </div>
-</div>
-
-<!-- Mobile Navigation Drawer -->
-<div class="mobile-drawer-overlay" id="mobile-drawer" onclick="if(event.target===this){this.classList.remove('active'); document.body.style.overflow='';}">
-  <div class="mobile-drawer-card">
-    <div class="mob-drawer-header">
-      <a href="/" class="brand-logo-wrap">
-        <img src="https://api.matelioverse.com/assets/e0847d46-2489-475e-8dfc-e7b520e1df15" alt="Matelioverse" width="145" height="28">
-      </a>
-      <button type="button" class="mob-drawer-close-btn" onclick="document.getElementById('mobile-drawer').classList.remove('active'); document.body.style.overflow='';">✕</button>
-    </div>
-
-    <div class="mob-drawer-body">
-      <div class="mob-drawer-section-title">EXPLORE</div>
-      <a href="/" class="mob-drawer-link">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-        <span>Home</span>
-      </a>
-      <a href="/categories.html" class="mob-drawer-link" style="color: var(--primary-green);">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4 4h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 10h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 16h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4z"/></svg>
-        <span>All 15 Categories</span>
-      </a>
-      <a href="/rfq.html" class="mob-drawer-link">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-        <span>Request for Quotation (RFQ)</span>
-        <span class="mob-badge-new">FAST</span>
-      </a>
-      <a href="/partner.html" class="mob-drawer-link">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9h-6m6 3h-6m3-3v6m0 0v3"/></svg>
-        <span>Line of Credit (CredEzy)</span>
-        <span class="mob-badge-hot">₹25L</span>
-      </a>
-      <a href="/partner.html" class="mob-drawer-link">
-        <span style="font-size:18px;">🎁</span>
-        <span>Refer & Earn ₹1000</span>
-      </a>
-
-      <div class="mob-drawer-divider"></div>
-
-      <div class="mob-drawer-section-title">SUPPORT & COMPANY</div>
-      <a href="/about.html" class="mob-drawer-link">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-        <span>About Matelioverse</span>
-      </a>
-      <a href="/contact.html" class="mob-drawer-link">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <span>Contact Us</span>
-      </a>
-      <a href="https://wa.me/919824939888" target="_blank" class="mob-drawer-link" style="color: #00A86B;">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.82.49 3.53 1.36 5L2 22l5.14-1.34A9.96 9.96 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm4.95 14.19c-.21.59-1.2 1.09-1.66 1.15-.43.06-.98.09-3.02-.75-2.6-1.07-4.24-3.73-4.37-3.9-.13-.17-1.04-1.39-1.04-2.64s.66-1.87.89-2.13c.23-.25.5-.32.67-.32.17 0 .34 0 .49.01.16.01.37-.06.57.43.21.5.72 1.76.78 1.89.06.13.1.28.02.44-.08.17-.13.27-.25.41-.13.14-.27.31-.38.42-.13.13-.26.26-.11.52.15.26.68 1.11 1.45 1.8.99.89 1.83 1.16 2.09 1.29.26.13.41.11.56-.06.16-.17.67-.78.85-1.05.18-.26.36-.22.6-.13.25.09 1.58.74 1.85.88.27.13.45.2.52.31.06.12.06.69-.15 1.28z"/></svg>
-        <span>WhatsApp Support</span>
-      </a>
-    </div>
-
-    <div class="mob-drawer-footer">
-      <button type="button" class="mob-drawer-login-btn" onclick="document.getElementById('mobile-drawer').classList.remove('active'); document.getElementById('login-modal').classList.add('active'); document.body.style.overflow='hidden';">
-        <span>Log in or Sign up</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </button>
-    </div>
-  </div>
-</div>
-
-<!-- Native Mobile App Bottom Navigation Bar -->
 <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
   <a href="/" class="mob-nav-tab">
     <svg class="mob-tab-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
     <span>Home</span>
   </a>
-  <a href="/partner.html" class="mob-nav-tab">
-    <svg class="mob-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9h-6m6 3h-6m3-3v6m0 0v3"/></svg>
-    <span>Credit</span>
+  <a href="/about.html" class="mob-nav-tab">
+    <svg class="mob-tab-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+    <span>About</span>
   </a>
   <a href="/categories.html" class="mob-nav-tab active">
     <svg class="mob-tab-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 10h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 16h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4z"/></svg>
     <span>Categories</span>
   </a>
-  <a href="/rfq.html" class="mob-nav-tab">
-    <svg class="mob-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-    <span>Orders</span>
+  <a href="/partner.html" class="mob-nav-tab">
+    <svg class="mob-tab-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+    <span>Partner</span>
   </a>
-  <button type="button" class="mob-nav-tab" onclick="document.getElementById('login-modal').classList.add('active'); document.body.style.overflow='hidden';">
-    <svg class="mob-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-    <span>Profile</span>
-  </button>
+  <a href="/contact.html" class="mob-nav-tab">
+    <svg class="mob-tab-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    <span>Contact</span>
+  </a>
 </nav>
 
-<script type="module" src="./script.js"></script>
+<div class="mobile-drawer-overlay" id="mobile-drawer" onclick="if(event.target === this){ this.classList.remove('active'); document.body.style.overflow=''; }">
+  <div class="mobile-drawer-card">
+    <div class="mob-drawer-header">
+      <img src="https://api.matelioverse.com/assets/e0847d46-2489-475e-8dfc-e7b520e1df15" alt="Matelioverse" style="height: 24px; width: auto;">
+      <button type="button" class="mob-drawer-close-btn" onclick="document.getElementById('mobile-drawer').classList.remove('active'); document.body.style.overflow='';">✕</button>
+    </div>
+    <div class="mob-drawer-body">
+      <a href="/" class="mob-drawer-link"><span>🏠</span> <span>Home</span></a>
+      <a href="/about.html" class="mob-drawer-link"><span>🏢</span> <span>About Us</span></a>
+      <a href="/categories.html" class="mob-drawer-link"><span>⊞</span> <span>Categories &amp; Brands</span></a>
+      <a href="/partner.html" class="mob-drawer-link"><span>🤝</span> <span>Partner With Us</span></a>
+      <a href="/contact.html" class="mob-drawer-link"><span>✉️</span> <span>Contact Us</span></a>
+    </div>
+  </div>
+</div>
+
+<div class="login-modal-overlay" id="login-modal" onclick="if(event.target === this){ this.classList.remove('active'); document.body.style.overflow=''; }">
+  <div class="login-modal-card">
+    <button type="button" class="modal-close-btn" onclick="document.getElementById('login-modal').classList.remove('active'); document.body.style.overflow='';">✕</button>
+    <div class="login-modal-content">
+      <div style="text-align: center; margin-bottom: 20px;">
+        <img src="https://api.matelioverse.com/assets/e0847d46-2489-475e-8dfc-e7b520e1df15" alt="Matelioverse" style="height: 28px; width: auto; margin-bottom: 12px;">
+        <h3 style="font-size: 20px; font-weight: 800; color: #0F172A;">Log in or sign up</h3>
+        <p style="font-size: 13px; color: #64748B; margin-top: 4px;">Access dealer pricing, order tracking, and franchise tools</p>
+      </div>
+      <form onsubmit="event.preventDefault(); alert('Demo: Verification OTP dispatched.'); document.getElementById('login-modal').classList.remove('active'); document.body.style.overflow='';">
+        <div style="margin-bottom: 16px;">
+          <input type="tel" required pattern="[0-9]{10}" placeholder="Enter 10-digit number" style="width: 100%; border: 1.5px solid #E2E8F0; padding: 12px 14px; font-size: 14px; border-radius: 10px;">
+        </div>
+        <button type="submit" style="width: 100%; height: 46px; background: var(--primary-green); color: #FFFFFF; font-weight: 700; border-radius: 12px; border: none; cursor: pointer;">SEND OTP</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="script.js"></script>
 </body>
 </html>

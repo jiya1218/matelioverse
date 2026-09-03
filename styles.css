@@ -3220,4 +3220,35 @@ img {
   }
 }
 
+/* ── Matelioverse Responsive Rules (Mobile & Tablet) ── */
+@media (max-width: 768px) {
+  .tech-edge-split-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .why-matelio-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .who-serve-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .news-media-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .partner-cta-box {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 20px !important;
+    padding: 28px 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .who-serve-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .news-media-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 
