@@ -1,0 +1,1576 @@
+/* ==========================================================================
+   MATELIOVERSE — Exact Madoverbuildings (MOB) Design System & Stylesheet
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --primary-green: #00A86B;
+  --primary-green-hover: #008f5b;
+  --primary-green-light: #E6F7F0;
+  --accent-blue: #1890FF;
+  --accent-gold: #D48806;
+  --dark-navy: #0A2540;
+  --text-dark: #141414;
+  --text-body: #262626;
+  --text-muted: #8C8C8C;
+  --border-light: #F0F0F0;
+  --bg-cream: #FEF6E6;
+  --bg-sky: #E6F7FF;
+  --bg-grey: #F5F5F5;
+  --bg-footer: #0B131F;
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --container-max: 1280px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-body);
+  background-color: #FFFFFF;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.site-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ==========================================================================
+   HEADER & NAVIGATION (Exact MOB Structure)
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Top Nav Row */
+.top-nav {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.top-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+}
+
+.nav-left-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.brand-logo-wrap {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand-logo-img {
+  height: 34px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
+}
+
+.footer-logo-img {
+  height: 38px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 2px 8px rgba(255, 107, 0, 0.2));
+}
+
+/* Delivery Location Picker */
+.delivery-picker-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+
+.delivery-picker-btn:hover {
+  background: var(--bg-grey);
+}
+
+.delivery-lightning {
+  color: var(--primary-green);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.delivery-text-wrap {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.delivery-title-row {
+  font-size: 13px;
+  font-weight: 700;
+  color: #141414;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.delivery-title-row svg {
+  width: 12px;
+  height: 12px;
+  stroke-width: 2.5;
+}
+
+.delivery-location-row {
+  font-size: 11px;
+  color: var(--text-muted);
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Top Search Bar */
+.top-search-wrap {
+  flex: 1;
+  max-width: 580px;
+  position: relative;
+}
+
+.top-search-inner {
+  display: flex;
+  align-items: center;
+  background: var(--bg-grey);
+  border: 1px solid #E8E8E8;
+  border-radius: 24px;
+  height: 42px;
+  padding: 0 6px 0 18px;
+  transition: all 0.2s;
+}
+
+.top-search-inner:focus-within {
+  background: #FFFFFF;
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(0, 168, 107, 0.15);
+}
+
+.top-search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #141414;
+  height: 100%;
+}
+
+.top-search-ai-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #EFF3FE;
+  color: #597EF7;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s, background 0.15s;
+}
+
+.top-search-ai-btn:hover {
+  background: #DCE5FE;
+  transform: scale(1.02);
+}
+
+.top-search-ai-btn svg {
+  width: 14px;
+  height: 14px;
+  fill: #597EF7;
+}
+
+/* Nav Right Actions */
+.top-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.referral-pill-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #FEF7E6;
+  border: 1px solid #FFE7BA;
+  border-radius: 12px;
+  padding: 6px 14px;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.referral-pill-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(212, 136, 6, 0.15);
+}
+
+.referral-gift-icon {
+  font-size: 18px;
+}
+
+.referral-text-stack {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.referral-label-sm {
+  font-size: 10px;
+  color: #8C8C8C;
+  font-weight: 600;
+}
+
+.referral-label-lg {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--accent-gold);
+}
+
+.nav-login-pill {
+  background: var(--primary-green);
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 24px;
+  border-radius: 20px;
+  transition: background 0.15s, transform 0.15s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-login-pill:hover {
+  background: var(--primary-green-hover);
+  transform: translateY(-1px);
+}
+
+.nav-cart-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #141414;
+  padding: 8px 12px;
+  border-radius: 8px;
+  position: relative;
+  transition: background 0.15s;
+}
+
+.nav-cart-btn:hover {
+  background: var(--bg-grey);
+}
+
+.nav-cart-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Secondary Sub-Nav Row */
+.sub-nav {
+  height: 44px;
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+}
+
+.sub-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.categories-menu-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #141414;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+
+.categories-menu-trigger:hover {
+  background: var(--bg-grey);
+}
+
+.categories-menu-trigger svg.grid-icon {
+  width: 18px;
+  height: 18px;
+  fill: #141414;
+}
+
+.sub-nav-right-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.sub-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: #595959;
+  transition: color 0.15s;
+}
+
+.sub-link:hover {
+  color: var(--primary-green);
+}
+
+.matelio-star-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #25324B;
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 16px;
+  text-decoration: none;
+  transition: transform 0.15s;
+}
+
+.matelio-star-pill:hover {
+  transform: translateY(-1px);
+}
+
+.matelio-star-pill svg {
+  width: 14px;
+  height: 14px;
+  fill: #FADB14;
+}
+
+/* ==========================================================================
+   HERO BANNER CAROUSEL (Exact MOB Hero)
+   ========================================================================== */
+.hero-wrapper {
+  padding-top: 16px;
+}
+
+.hero-slider-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #002B49;
+}
+
+.hero-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  width: 100%;
+}
+
+.hero-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 44px 56px;
+  min-height: 330px;
+  position: relative;
+  border-radius: 24px;
+}
+
+/* Slide 1: Credit */
+.hero-slide--credit {
+  background: linear-gradient(105deg, #002B49 0%, #011E33 100%);
+  color: #FFFFFF;
+}
+
+.hero-slide--credit .hero-h1 {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+
+.hero-h1 .accent-mint {
+  color: #34D399;
+}
+
+.hero-shield-icon {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+.credit-features-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.credit-feat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.feat-circle-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #34D399;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.credit-feat-item span {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.hero-white-pill-btn {
+  background: #FFFFFF;
+  color: #002B49;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 36px;
+  border-radius: 24px;
+  display: inline-block;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.hero-white-pill-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.hero-credit-graphic {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-credit-graphic img {
+  max-height: 250px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 25px rgba(0,0,0,0.3));
+}
+
+/* Slide 2: Referral */
+.hero-slide--refer {
+  background: linear-gradient(105deg, #1C130D 0%, #16110B 100%);
+  color: #FFFFFF;
+}
+
+.hero-slide--refer .hero-h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.hero-gold-pill-btn {
+  background: #FBBF24;
+  color: #78350F;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 12px 36px;
+  border-radius: 24px;
+  display: inline-block;
+  box-shadow: 0 4px 14px rgba(251, 191, 36, 0.3);
+  transition: transform 0.15s;
+}
+
+.hero-gold-pill-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Slide 3: All Materials */
+.hero-slide--materials {
+  background: linear-gradient(105deg, #2B1810 0%, #1F110B 100%);
+  color: #FFFFFF;
+}
+
+.free-delivery-badge-box {
+  display: inline-flex;
+  align-items: center;
+  border: 1.5px solid #F97316;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.free-badge-white {
+  background: #FFFFFF;
+  color: #141414;
+  font-size: 12px;
+  font-weight: 900;
+  font-style: italic;
+  padding: 4px 8px;
+}
+
+.free-badge-orange {
+  background: #F97316;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 10px;
+}
+
+.free-note-text {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-left: 10px;
+}
+
+.qwik-delivery-tag-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.qwik-tag-pill {
+  background: rgba(52, 211, 153, 0.15);
+  border: 1px solid #34D399;
+  color: #34D399;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+
+/* Slider indicator dots (capsule style like MOB) */
+.hero-dots-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 14px 0 6px;
+}
+
+.hero-dots-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #E5E7EB;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.hero-dot-btn {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #9CA3AF;
+  transition: all 0.25s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-dot-btn.active {
+  width: 24px;
+  border-radius: 6px;
+  background: var(--primary-green);
+}
+
+/* ==========================================================================
+   CATEGORIES GRID (Exact 2-Row MOB Grid: 8 Row 1, 7 Row 2)
+   ========================================================================== */
+.categories-section {
+  padding: 28px 0 20px;
+}
+
+.categories-grid-row-1 {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.categories-grid-row-2 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 14px;
+}
+
+.cat-card-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cat-card-item:hover {
+  transform: translateY(-4px);
+}
+
+.cat-card-box {
+  width: 100%;
+  height: 110px;
+  background-color: var(--bg-cream);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.cat-card-item:hover .cat-card-box {
+  background-color: #FCEFD2;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.cat-card-box img {
+  max-height: 85px;
+  max-width: 90px;
+  object-fit: contain;
+  transition: transform 0.25s;
+}
+
+.cat-card-item:hover .cat-card-box img {
+  transform: scale(1.06);
+}
+
+.cat-card-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dark-navy);
+  margin-top: 10px;
+  line-height: 1.25;
+  max-width: 120px;
+}
+
+/* ==========================================================================
+   DUAL PROMO CARDS (Magic AI Quote + Line of Credit)
+   ========================================================================== */
+.dual-promo-section {
+  padding: 24px 0 32px;
+}
+
+.dual-promo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.promo-banner-card {
+  border-radius: 20px;
+  padding: 32px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  min-height: 220px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.promo-banner-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Card 1: Magic AI Quote */
+.promo-card--magic {
+  background: #015535;
+  color: #FFFFFF;
+}
+
+.promo-card--magic .promo-h2 {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.promo-h2 .star-sparkle {
+  color: #FADB14;
+}
+
+.promo-card--magic .promo-p {
+  font-size: 13px;
+  color: #D8E8E0;
+  margin-bottom: 20px;
+}
+
+.promo-white-btn {
+  background: #FFFFFF;
+  color: #141414;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: transform 0.15s;
+}
+
+.promo-white-btn:hover {
+  transform: translateY(-1px);
+}
+
+.promo-visual-wrap img {
+  max-height: 175px;
+  object-fit: contain;
+}
+
+/* Card 2: Line of Credit */
+.promo-card--credit {
+  background: #0A3866;
+  color: #FFFFFF;
+}
+
+.promo-card--credit .promo-h2 {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.promo-h2 .cyan-text {
+  color: #00E5FF;
+}
+
+.credit-checklist {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.credit-chk-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.credit-chk-item svg {
+  width: 16px;
+  height: 16px;
+  fill: #34D399;
+}
+
+.tc-note-badge {
+  position: absolute;
+  bottom: 16px;
+  right: 24px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ==========================================================================
+   POPULAR BRANDS (Exact MOB Style)
+   ========================================================================== */
+.section-block {
+  padding: 24px 0;
+}
+
+.section-title-h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--dark-navy);
+  margin-bottom: 20px;
+}
+
+.popular-brands-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.brand-showcase-card {
+  background: var(--bg-sky);
+  border-radius: 18px;
+  padding: 24px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 250px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.brand-showcase-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(24, 144, 255, 0.12);
+}
+
+.brand-showcase-logo {
+  max-height: 38px;
+  max-width: 120px;
+  object-fit: contain;
+}
+
+.brand-showcase-product {
+  max-height: 150px;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.25s;
+}
+
+.brand-showcase-card:hover .brand-showcase-product {
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   PRODUCT CAROUSELS & PRODUCT CARDS (Exact MOB Style: Clean & Borderless)
+   ========================================================================== */
+.product-slider-relative {
+  position: relative;
+}
+
+.product-horizontal-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 8px 4px 16px;
+}
+
+.product-horizontal-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-nav-arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: #FFFFFF;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+  border: none;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.carousel-nav-arrow:hover {
+  background: #F8F9FA;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.carousel-nav-arrow.arrow-left {
+  left: -16px;
+}
+
+.carousel-nav-arrow.arrow-right {
+  right: -16px;
+}
+
+.carousel-nav-arrow svg {
+  width: 18px;
+  height: 18px;
+  stroke: #141414;
+  stroke-width: 2.5;
+}
+
+/* Product Card - Exact MOB Styling */
+.mob-product-card {
+  min-width: 220px;
+  max-width: 220px;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.mob-product-card:hover {
+  transform: translateY(-3px);
+}
+
+.prod-img-box {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.prod-discount-badge {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  background: var(--primary-green);
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.prod-img-box img {
+  max-height: 160px;
+  max-width: 160px;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.mob-product-card:hover .prod-img-box img {
+  transform: scale(1.04);
+}
+
+.prod-action-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.mob-add-btn {
+  border: 1.5px solid var(--accent-blue);
+  color: var(--accent-blue);
+  background: #FFFFFF;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 18px;
+  border-radius: 16px;
+  transition: all 0.15s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+}
+
+.mob-add-btn:hover {
+  background: var(--accent-blue);
+  color: #FFFFFF;
+}
+
+.mob-add-options-sm {
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.prod-title {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.35;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 38px;
+}
+
+.prod-pricing-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.prod-price-bold {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.prod-mrp-strike {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+/* ==========================================================================
+   CATEGORY PROMO BANNERS (Row 1: 3 Cards, Row 2: 2 Banners)
+   ========================================================================== */
+.promo-tri-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 16px 0 28px;
+}
+
+.tri-banner-card {
+  border-radius: 20px;
+  padding: 28px 24px;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tri-banner-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.tri-card--mauve {
+  background: #8B3A62;
+}
+
+.tri-card--slate {
+  background: #4B6B94;
+}
+
+.tri-card--teal {
+  background: #00838F;
+}
+
+.tri-brand-logo-top {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  max-height: 28px;
+  filter: brightness(0) invert(1);
+}
+
+.tri-h3 {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.25;
+  max-width: 220px;
+  margin-bottom: 8px;
+}
+
+.tri-discount-tag {
+  font-size: 13px;
+  font-weight: 700;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.tri-order-btn {
+  background: #FFFFFF;
+  color: #141414;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 22px;
+  border-radius: 18px;
+  width: fit-content;
+  transition: transform 0.15s;
+}
+
+.tri-order-btn:hover {
+  transform: translateY(-1px);
+}
+
+.tri-visual-bottom-right {
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+  max-height: 120px;
+  object-fit: contain;
+}
+
+/* Two Big Horizontal Banners: Referral & Loyalty */
+.dual-horizontal-banners {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 32px 0;
+}
+
+.big-promo-banner {
+  border-radius: 20px;
+  padding: 32px 36px;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.big-promo-banner:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.banner--referral-blue {
+  background: #2563EB;
+}
+
+.banner--loyalty-purple {
+  background: #6D28D9;
+}
+
+.big-banner-h3 {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.big-banner-gold-price {
+  font-size: 38px;
+  font-weight: 900;
+  color: #FADB14;
+  line-height: 1;
+}
+
+.big-banner-img {
+  max-height: 140px;
+  object-fit: contain;
+}
+
+/* ==========================================================================
+   TESTIMONIALS (Exact MOB Testimonial Cards)
+   ========================================================================== */
+.testimonials-section-block {
+  padding: 40px 0 24px;
+}
+
+.trusted-green-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #E6F4EA;
+  color: #137333;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.testimonials-3col-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.mob-testimonial-card {
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 240px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mob-testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.test-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.test-company-logo {
+  font-weight: 800;
+  font-size: 16px;
+  color: #141414;
+}
+
+.test-tag-pill {
+  background: #EAF7ED;
+  color: #1B8036;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.test-body-text {
+  font-size: 13.5px;
+  color: #374151;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.test-author-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.test-avatar-img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.test-name-bold {
+  font-size: 14px;
+  font-weight: 700;
+  color: #141414;
+}
+
+.test-role-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   SUPPORTING PARTNERS STRIP
+   ========================================================================== */
+.supporting-partners-wrap {
+  padding: 24px 0 36px;
+}
+
+.partners-logos-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 16px 0;
+}
+
+.partner-logo-item {
+  font-size: 18px;
+  font-weight: 800;
+  color: #8C8C8C;
+  letter-spacing: 0.5px;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+
+.partner-logo-item:hover {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   TRUST HIGHLIGHTS BAR
+   ========================================================================== */
+.trust-bar-section {
+  background: #F9FAFB;
+  border-top: 1px solid #E5E7EB;
+  border-bottom: 1px solid #E5E7EB;
+  padding: 24px 0;
+}
+
+.trust-bar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.trust-badge-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.trust-badge-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid var(--primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-green);
+  flex-shrink: 0;
+}
+
+.trust-badge-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--primary-green);
+}
+
+.trust-badge-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #141414;
+}
+
+/* ==========================================================================
+   MAIN DARK FOOTER (Exact MOB Footer)
+   ========================================================================== */
+.site-dark-footer {
+  background-color: var(--bg-footer);
+  color: #94A3B8;
+  padding: 56px 0 24px;
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.footer-brand-col .footer-logo-wrap {
+  margin-bottom: 20px;
+}
+
+.footer-logo-text {
+  font-size: 28px;
+  font-weight: 900;
+  color: #FFFFFF;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.footer-materials-h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.footer-hours-gold {
+  font-size: 28px;
+  font-weight: 900;
+  color: #F59E0B;
+}
+
+.footer-col-h4 {
+  font-size: 13px;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links-list a {
+  color: #94A3B8;
+  font-size: 13.5px;
+  transition: color 0.15s;
+}
+
+.footer-links-list a:hover {
+  color: #FFFFFF;
+}
+
+.footer-contact-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.city-contact-group {
+  margin-bottom: 8px;
+}
+
+.city-label-bold {
+  font-size: 13px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+}
+
+.contact-link-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #94A3B8;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.contact-link-row:hover {
+  color: #FFFFFF;
+}
+
+/* Category Pills in Footer */
+.footer-categories-block {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 28px 0;
+}
+
+.footer-cat-pills-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.footer-cat-pill {
+  background: #1E293B;
+  color: #94A3B8;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 16px;
+  transition: all 0.15s;
+}
+
+.footer-cat-pill:hover {
+  background: #334155;
+  color: #FFFFFF;
+}
+
+/* Bottom Bar */
+.footer-bottom-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.footer-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-social-icons a {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #1E293B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94A3B8;
+  transition: background 0.15s, color 0.15s;
+}
+
+.footer-social-icons a:hover {
+  background: var(--primary-green);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Tablets & Mobile)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .categories-grid-row-1 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .categories-grid-row-2 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .popular-brands-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .tri-promo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-top-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .top-nav {
+    height: 60px;
+  }
+  .delivery-picker-btn,
+  .referral-pill-btn,
+  .sub-nav {
+    display: none;
+  }
+  .hero-slide {
+    flex-direction: column;
+    padding: 24px;
+    text-align: center;
+  }
+  .credit-features-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .categories-grid-row-1,
+  .categories-grid-row-2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .dual-promo-grid,
+  .dual-horizontal-banners,
+  .testimonials-3col-grid {
+    grid-template-columns: 1fr;
+  }
+  .trust-bar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+  }
+}

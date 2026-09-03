@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Contact Us | Matelioverse</title>
+  <meta name="description" content="Get in touch with Matelioverse. Contact us for building materials inquiries, partnership requests, bulk orders, or support.">
+  <link rel="icon" href="https://matelioverse.com/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header class="header" id="header">
+  <nav class="top-nav" aria-label="Primary navigation">
+    <div class="top-nav-inner">
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+      <a href="/" class="nav-logo" aria-label="Matelioverse home">
+        <img src="https://api.matelioverse.com/assets/e0847d46-2489-475e-8dfc-e7b520e1df15" alt="Matelioverse Logo" width="180" height="32">
+      </a>
+      <div class="nav-search">
+        <div class="search-input-wrap">
+          <input type="search" placeholder="Search products..." autocomplete="off" aria-label="Search">
+          <button class="search-ai-btn" aria-label="AI Search">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1.27c.34-.6.99-1 1.73-1a2 2 0 010 4c-.74 0-1.39-.4-1.73-1H20a7 7 0 01-7 7v1.27c.6.34 1 .99 1 1.73a2 2 0 01-4 0c0-.74.4-1.39 1-1.73V23a7 7 0 01-7-7H2.73c-.34.6-.99 1-1.73 1a2 2 0 010-4c.74 0 1.39.4 1.73 1H4a7 7 0 017-7V5.73c-.6-.34-1-.99-1-1.73a2 2 0 012-2z"/></svg>
+            <span>AI</span>
+          </button>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <button class="nav-login-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Login</span></button>
+        <button class="nav-cart-btn" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg><span>Cart</span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="sub-nav">
+    <div class="sub-nav-inner">
+      <div class="sub-nav-left">
+        <a href="/categories.html" class="categories-dropdown-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/></svg>Categories</a>
+      </div>
+      <div class="sub-nav-right">
+        <a href="/about.html" class="sub-nav-link">About Us</a>
+        <a href="/partner.html" class="sub-nav-link">Partner With Us</a>
+        <a href="/categories.html" class="sub-nav-link">All Categories</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+<div class="mobile-nav-drawer" id="mobile-nav-drawer">
+  <div class="mobile-nav-header">
+    <img src="https://api.matelioverse.com/assets/e0847d46-2489-475e-8dfc-e7b520e1df15" alt="Matelioverse" height="28">
+    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+  </div>
+  <nav class="mobile-nav-links">
+    <a href="/">Home</a><a href="/about.html">About Us</a><a href="/categories.html">Categories & Brands</a><a href="/partner.html">Partner With Us</a><a href="/contact.html">Contact Us</a>
+  </nav>
+</div>
+
+<main id="main-content">
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <h1 class="page-hero-title">Contact Us</h1>
+    <p class="page-hero-subtitle">Have questions about our products, partnership opportunities, or need support? We're here to help.</p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+  <div class="contact-grid">
+    <div>
+      <h2 style="font-size: 28px; font-weight: 800; color: #111; margin-bottom: 8px;">Send Us a Message</h2>
+      <p style="color: #6b7280; margin-bottom: 32px; line-height: 1.6;">Fill out the form and our team will respond within 24 hours.</p>
+      <form class="contact-form" id="contact-form" onsubmit="event.preventDefault(); alert('Thank you for reaching out! We\'ll get back to you within 24 hours.');">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div class="form-group">
+            <label for="c-fname">First Name *</label>
+            <input type="text" id="c-fname" placeholder="First name" required>
+          </div>
+          <div class="form-group">
+            <label for="c-lname">Last Name *</label>
+            <input type="text" id="c-lname" placeholder="Last name" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="c-email">Email Address *</label>
+          <input type="email" id="c-email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="c-phone">Phone Number *</label>
+          <input type="tel" id="c-phone" placeholder="+91 XXXXX XXXXX" required>
+        </div>
+        <div class="form-group">
+          <label for="c-subject">Subject</label>
+          <select id="c-subject">
+            <option value="">Select a topic</option>
+            <option value="general">General Inquiry</option>
+            <option value="order">Order Related</option>
+            <option value="partnership">Partnership Inquiry</option>
+            <option value="bulk">Bulk / RFQ Order</option>
+            <option value="complaint">Complaint / Issue</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="c-message">Message *</label>
+          <textarea id="c-message" placeholder="Write your message here..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message →</button>
+      </form>
+    </div>
+
+    <div>
+      <div class="contact-info-card">
+        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 24px;">Get In Touch</h3>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/></svg>
+          </div>
+          <div class="contact-info-text">
+            <h4>Email</h4>
+            <p>hello@matelioverse.com<br>ask@matelioverse.com</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </div>
+          <div class="contact-info-text">
+            <h4>Phone</h4>
+            <p>+91 98249 39888<br>+91 89704 15365</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div class="contact-info-text">
+            <h4>Head Office (Ahmedabad)</h4>
+            <p>405 Claywalls, OPP. Shanti Palace<br>Hebatpur Road, Thaltej, Ahmedabad, 380054</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+          </div>
+          <div class="contact-info-text">
+            <h4>Working Hours</h4>
+            <p>Mon - Sat: 9:00 AM - 7:00 PM<br>Sun: 10:00 AM - 4:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Links -->
+      <div style="margin-top: 24px; padding: 24px; background: #f9fafb; border-radius: 16px;">
+        <h4 style="font-size: 14px; font-weight: 700; color: #111; margin-bottom: 16px;">Follow Us</h4>
+        <div class="footer-social" style="display:flex; gap:12px;">
+          <a href="https://www.linkedin.com/company/matelioverse/" target="_blank" rel="noopener" aria-label="LinkedIn" style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:#e5e7eb;border-radius:50%;transition:background .2s;">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="#374151"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/matelioverse/" target="_blank" rel="noopener" aria-label="Instagram" style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:#e5e7eb;border-radius:50%;transition:background .2s;">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="#374151"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2m-.2 2A3.6 3.6 0 004 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5M12 7a5 5 0 110 10 5 5 0 010-10m0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/matelioverse/" target="_blank" rel="noopener" aria-label="Facebook" style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:#e5e7eb;border-radius:50%;transition:background .2s;">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="#374151"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06c0 4.99 3.66 9.12 8.44 9.88v-6.99H7.9v-2.89h2.54V9.85c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.89h-2.33v6.99C18.34 21.18 22 17.05 22 12.06c0-5.53-4.5-10.02-10-10.02z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="https://api.matelioverse.com/assets/e0847d46-2489-475e-8dfc-e7b520e1df15" alt="Matelioverse" class="footer-logo">
+      <p class="footer-tagline">India's Smartest Building Materials Platform.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2m-.2 2A3.6 3.6 0 004 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5M12 7a5 5 0 110 10 5 5 0 010-10m0 2a3 3 0 100 6 3 3 0 000-6z"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06c0 4.99 3.66 9.12 8.44 9.88v-6.99H7.9v-2.89h2.54V9.85c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.89h-2.33v6.99C18.34 21.18 22 17.05 22 12.06c0-5.53-4.5-10.02-10-10.02z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-column"><h4>Company</h4><ul><li><a href="/about.html">About Us</a></li><li><a href="/partner.html">Partner With Us</a></li><li><a href="/contact.html">Contact Us</a></li></ul></div>
+    <div class="footer-column"><h4>Policies</h4><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms & Conditions</a></li><li><a href="#">Return Policy</a></li></ul></div>
+    <div class="footer-column"><h4>Contact</h4><ul><li><a href="mailto:info@matelioverse.com">📧 info@matelioverse.com</a></li><li><a href="tel:+918970415365">📞 +91 89704 15365</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><div class="footer-bottom-inner"><span class="footer-copyright">© 2025 Matelioverse. All rights reserved.</span><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div></div></div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const overlay = document.getElementById('mobile-nav-overlay');
+  const drawer = document.getElementById('mobile-nav-drawer');
+  const closeBtn = document.getElementById('mobile-nav-close');
+  function openNav() { overlay.classList.add('active'); drawer.classList.add('active'); document.body.style.overflow='hidden'; }
+  function closeNav() { overlay.classList.remove('active'); drawer.classList.remove('active'); document.body.style.overflow=''; }
+  if(menuBtn)menuBtn.addEventListener('click',openNav);
+  if(overlay)overlay.addEventListener('click',closeNav);
+  if(closeBtn)closeBtn.addEventListener('click',closeNav);
+});
+</script>
+</body>
+</html>
